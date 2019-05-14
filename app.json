@@ -1,6 +1,11 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/index2/index",
+    "pages/index3/index",
+    "pages/index4/index",
+    "pages/index5/index"
+
   ],
   "window": {
     "enableWK": "YES",
@@ -16,17 +21,36 @@
     "selectedColor": "#108ee9",
     "backgroundColor": "#F5F5F9",
     "items": [
-      {
-        "pagePath": "page/component/index",
-        "icon": "image/icon_component.png",
-        "activeIcon": "image/icon_component_HL.png",
-        "name": "组件"
+     {
+        "pagePath": "pages/index/index",
+        "icon": "assets/tabbarIcon/shop_gray.png",
+        "activeIcon": "assets/tabbarIcon/shop.png",
+        "name": "消息"
       },
       {
-        "pagePath": "page/API/index/index",
-        "icon": "image/icon_API.png",
-        "activeIcon": "image/icon_API_HL.png",
-        "name": "API"
+        "pagePath": "pages/index2/index",
+        "icon": "assets/tabbarIcon/editFile_gray.png",
+        "activeIcon": "assets/tabbarIcon/editFile.png",
+        "name": "记录"
+      },
+      {
+        "pagePath": "pages/index3/index",
+         "icon": "assets/tabbarIcon/diamond_gray.png",
+        "activeIcon": "assets/tabbarIcon/diamond.png",
+        
+        "name": "首页"
+      },
+      {
+        "pagePath": "pages/index4/index",
+       "icon": "assets/tabbarIcon/list2_gray.png",
+        "activeIcon": "assets/tabbarIcon/list2.png",
+        "name": "报表"
+      },
+      {
+        "pagePath": "pages/index5/index",
+        "icon": "assets/tabbarIcon/class_gray.png",
+        "activeIcon": "assets/tabbarIcon/class.png",
+        "name": "我的"
       }
     ]
   },

@@ -1,2 +1,1 @@
-<view style="margin-top: 10px;" />
-<grid onGridItemClick="onItemClick" columnNum="{{4}}" list="{{list4}}" />
+消息
