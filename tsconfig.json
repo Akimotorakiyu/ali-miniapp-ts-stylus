@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": { "*": ["types/*"] },
+        "target": "es2017",
+        "watch": true,
+        "lib": ["es2017","dom"]
+    }
+}

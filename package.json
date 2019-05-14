@@ -4,11 +4,14 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "mini-antui": "^0.4.26"
+    "mini-antui": "^0.4.26",
+    "stylus": "^0.54.5",
+    "typescript": "^3.4.5",
+    "wefetch": "^1.2.4"
   }
 }

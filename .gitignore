@@ -29,3 +29,4 @@ node_modules
 /lib/
 /es/
 /examples/es/
+yarn.lock
