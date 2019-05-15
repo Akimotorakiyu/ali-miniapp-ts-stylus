@@ -89,5 +89,7 @@ declare interface navOption {
 declare namespace my {
   function httpRequest(option: requestOption): void;
   function alert(option: alertOption): void;
-  function navigateTo(option:navOption):void
+  function navigateTo(option:navOption):void;
+  function SDKVersion():string;
+  function getSystemInfoSync():any;
 }
