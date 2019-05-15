@@ -1,9 +1,8 @@
 {
     "compilerOptions": {
-        "baseUrl": ".",
-        "paths": { "*": ["types/*"] },
-        "target": "es2017",
-        "watch": true,
-        "lib": ["es2017","dom"]
+        "target": "es5",
+        "lib": ["es2017", "dom"],
+        "allowUnusedLabels": true,
+        "watch": true
     }
 }
