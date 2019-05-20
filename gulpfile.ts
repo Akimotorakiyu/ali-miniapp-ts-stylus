@@ -20,8 +20,10 @@ function acss(done) {
         .pipe(rename({
             extname: '.acss',
         }))
-        .pipe(gulp.dest("pages"));
-    done();
+        .pipe(gulp.dest("pages"))
+        .on("end", () => {
+            done();
+        })
 }
 
 function tsc(done) {
@@ -29,8 +31,10 @@ function tsc(done) {
         .pipe(plumber())
         .pipe(tsProject())
         .js
-        .pipe(gulp.dest("."));
-    done();
+        .pipe(gulp.dest("."))
+        .on("end", () => {
+            done();
+        })
 }
 
 console.log("starting gulp task...")
@@ -46,5 +50,8 @@ watcher.push(gulp.watch(`./**/*.ts`, tsc))
 watcher.forEach((ele) => {
     ele.on("change", (fileName, eventType) => {
         console.log(`${fileName} changed...`)
+    })
+    ele.on("error", (error) => {
+        console.error(error)
     })
 })

@@ -1,40 +1,45 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var gulp = require("gulp");
-var rename = require("gulp-rename");
-var stylus = require("gulp-stylus");
-var plumber = require("gulp-plumber");
-var autoprefixer = require("autoprefixer");
-var postcss = require("gulp-postcss");
-var ts = require("gulp-typescript");
-var tsProject = ts.createProject("tsconfig.json");
+import * as gulp from "gulp";
+import * as rename from "gulp-rename";
+import * as stylus from "gulp-stylus";
+import * as plumber from "gulp-plumber";
+import * as autoprefixer from "autoprefixer";
+import * as postcss from "gulp-postcss";
+import * as ts from "gulp-typescript";
+let tsProject = ts.createProject("tsconfig.json");
 function acss(done) {
-    gulp.src("pages/**/*.styl")
+    gulp.src(`pages/**/*.styl`)
         .pipe(plumber())
         .pipe(stylus())
         .pipe(postcss([autoprefixer()]))
         .pipe(rename({
         extname: '.acss',
     }))
-        .pipe(gulp.dest("pages"));
-    done();
+        .pipe(gulp.dest("pages"))
+        .on("end", () => {
+        done();
+    });
 }
 function tsc(done) {
     tsProject.src()
         .pipe(plumber())
         .pipe(tsProject())
         .js
-        .pipe(gulp.dest("."));
-    done();
+        .pipe(gulp.dest("."))
+        .on("end", () => {
+        done();
+    });
 }
 console.log("starting gulp task...");
 gulp.task("default", gulp.parallel(acss, tsc));
 console.log("starting watching...");
-var watcher = [];
-watcher.push(gulp.watch("./**/*.styl", acss));
-watcher.push(gulp.watch("./**/*.ts", tsc));
-watcher.forEach(function (ele) {
-    ele.on("change", function (fileName, eventType) {
-        console.log(fileName + " changed...");
+let watcher = [];
+watcher.push(gulp.watch(`./**/*.styl`, acss));
+watcher.push(gulp.watch(`./**/*.ts`, tsc));
+watcher.forEach((ele) => {
+    ele.on("change", (fileName, eventType) => {
+        console.log(`${fileName} changed...`);
+    });
+    ele.on("error", (error) => {
+        console.error(error);
     });
 });

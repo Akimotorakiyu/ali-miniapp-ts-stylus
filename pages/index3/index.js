@@ -1,6 +1,6 @@
 new Page({
     data: {},
-    onItemClick: function (ev) {
+    onItemClick(ev) {
         my.alert({
             title: "aaaa",
             content: ev.detail.index,

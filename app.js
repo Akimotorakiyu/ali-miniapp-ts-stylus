@@ -1,13 +1,13 @@
 new App({
-    onLaunch: function (options) {
+    onLaunch(options) {
         console.log('App Launch', options);
         console.log('getSystemInfoSync', my.getSystemInfoSync());
         console.log('SDKVersion', my.SDKVersion);
     },
-    onShow: function () {
+    onShow() {
         console.log('App Show');
     },
-    onHide: function () {
+    onHide() {
         console.log('App Hide');
     },
     globalData: {
