@@ -93,3 +93,25 @@ declare namespace my {
   function SDKVersion():string;
   function getSystemInfoSync():any;
 }
+
+declare interface eventThing{
+  type:string;
+  timeStamp:number;
+  target:{
+    id?:string;
+    tagName:string,
+    dataset:{
+      [props:string]:any
+    }
+  };
+  detail:{
+    value?:any
+  };
+  currentTarget:{
+    id?:string;
+    tagName:string,
+    dataset:{
+      [props:string]:any
+    }
+  };
+}
