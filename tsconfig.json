@@ -3,6 +3,9 @@
         "target": "es2017",
         "lib": ["es2017", "dom"],
         "allowUnusedLabels": true,
-        "moduleResolution": "node"
-    }
+        "moduleResolution": "node",
+        "outDir": "pages"
+    },
+    "include": ["src/**/*","types/**/*"],
+    "exclude": ["node_modules"]
 }
