@@ -1,10 +1,10 @@
 import * as  gulp from "gulp"
-import * as rename from "gulp-rename"
-import * as stylus from "gulp-stylus"
-import * as plumber from "gulp-plumber"
+import rename = require("gulp-rename")
+import stylus = require("gulp-stylus")
+import plumber = require("gulp-plumber")
 
-import * as autoprefixer from "autoprefixer"
-import * as postcss from "gulp-postcss"
+import autoprefixer = require("autoprefixer")
+import postcss = require("gulp-postcss")
 
 import * as ts from "gulp-typescript"
 import { FSWatcher } from "fs";
