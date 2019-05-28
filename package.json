@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "npx gulp -f gulpfile.ts"
+    "dev": "gulp -f gulpfile.ts"
   },
   "author": "",
   "license": "ISC",
