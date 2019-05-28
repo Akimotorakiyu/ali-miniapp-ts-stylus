@@ -1,3 +1,4 @@
+let app = getApp();
 new Page({
     data: {},
     onItemClick(ev) {

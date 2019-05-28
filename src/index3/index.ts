@@ -1,3 +1,5 @@
+let app = getApp()
+
 new Page({
     data: {
     },
@@ -9,4 +11,5 @@ new Page({
     },
     
   });
-  
+
+  export {}
