@@ -1,2 +1,3 @@
 @import "./style/colorui/main.acss";
 @import "./style/colorui/icon.acss";
+@import "./style/colorui/animation.acss";
