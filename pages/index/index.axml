@@ -1,1 +1,7 @@
 消息
+
+<view class="cu-bar bg-white ">
+  <view class="action">
+    <text>我是 colourUI bar</text>
+  </view>
+</view>
