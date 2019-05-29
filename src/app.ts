@@ -1,5 +1,3 @@
-///<reference path="./types/dingtalk.d.ts" />
-
 new App({
     onLaunch(options) {
       console.log('App Launch', options);

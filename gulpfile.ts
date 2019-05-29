@@ -11,7 +11,7 @@ import { FSWatcher } from "fs";
 
 let tsProject = ts.createProject("tsconfig.json");
 
-const dist = "pages"
+const dist = "./"
 
 function acss() {
     return gulp.src(`src/**/*.styl`)
@@ -31,18 +31,13 @@ function tsc() {
         .pipe(gulp.dest(dist))
 }
 
-function json() {
-    return gulp.src(`src/**/*.json`)
-        .pipe(gulp.dest(dist));
-}
-
-function axml() {
-    return gulp.src(`src/**/*.axml`)
+function other() {
+    return gulp.src(`src/**/!(*.styl|*.ts|*.d.ts)`)
         .pipe(gulp.dest(dist));
 }
 
 console.log("starting gulp task...")
-gulp.task("default", gulp.parallel(acss, tsc, json, axml))
+gulp.task("default", gulp.parallel(acss, tsc, other))
 
 console.log("starting watching...")
 
@@ -50,8 +45,7 @@ let watcher = <FSWatcher[]>[]
 
 watcher.push(gulp.watch(`src/**/*.styl`, acss))
 watcher.push(gulp.watch(`src/**/*.ts`, tsc))
-watcher.push(gulp.watch(`src/**/*.json`, json))
-watcher.push(gulp.watch(`src/**/*.axml`, axml))
+watcher.push(gulp.watch(`src/**/*.json`, other))
 
 watcher.forEach((ele) => {
     ele.on("change", (fileName, eventType) => {
