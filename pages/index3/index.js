@@ -1,5 +1,5 @@
 let app = getApp();
-new Page({
+Page({
     data: {},
     onItemClick(ev) {
         my.alert({
