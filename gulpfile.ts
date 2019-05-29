@@ -45,7 +45,7 @@ let watcher = <FSWatcher[]>[]
 
 watcher.push(gulp.watch(`src/**/*.styl`, acss))
 watcher.push(gulp.watch(`src/**/*.ts`, tsc))
-watcher.push(gulp.watch(`src/**/*.json`, other))
+watcher.push(gulp.watch(`src/**/!(*.styl|*.ts|*.d.ts)`, other))
 
 watcher.forEach((ele) => {
     ele.on("change", (fileName, eventType) => {
