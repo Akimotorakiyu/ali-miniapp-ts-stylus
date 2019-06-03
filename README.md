@@ -2,6 +2,8 @@
 
 本模板采用`typescript`,`stylus`。
 
+集成请求库`wefech`，集成组件库`mini-antui`。
+
 ## 使用方法
 
 1. 开发前准备
