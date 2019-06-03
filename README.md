@@ -2,7 +2,7 @@
 
 本模板采用`typescript`,`stylus`。
 
-集成请求库`wefech`，集成组件库`mini-antui`。
+集成请求库`wefech`，集成组件库`mini-antui`，集成样式库`ColorUI`
 
 ## 使用方法
 
