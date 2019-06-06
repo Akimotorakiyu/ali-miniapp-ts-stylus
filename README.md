@@ -37,3 +37,6 @@ yarn dev
 
 type定义已提交PR到wefetch，等待在npm上发布。
 在未发布之前，可直接将`types/wefetch.d.ts`手动复制并更名到`node_modules/wefect/index.d.ts`
+
+### typescript 3.5.1 之后 若报错 Duplicate identifier 'Omit' 
+去`mini-type`里面删除或注掉相应的类型声明即可
