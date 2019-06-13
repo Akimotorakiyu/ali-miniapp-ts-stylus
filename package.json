@@ -25,7 +25,7 @@
     "gulp-stylus": "^2.7.0",
     "gulp-typescript": "^5.0.1",
     "mini-antui": "^0.4.26",
-    "mini-types": "^0.0.1",
+    "mini-types": "^0.0.2",
     "postcss": "^7.0.16",
     "stylus": "^0.54.5",
     "ts-node": "^8.1.0",
