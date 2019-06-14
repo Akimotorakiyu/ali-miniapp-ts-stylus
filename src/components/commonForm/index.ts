@@ -9,18 +9,16 @@ Component({
             console.log(this.data)
         },
         form: [],
-        value: {}
+        data: {}
     },
     onInit() {
 
     },
     didMount() {
-        this.setData({
-            formData: this.props.defaultData
-        })
+
     },
     didUpdate() {
-        this.props.onChange(this.data.formData)
+       
     },
     didUnmount() {
 

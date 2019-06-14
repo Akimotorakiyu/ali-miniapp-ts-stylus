@@ -9,19 +9,19 @@
     <view class="cu-form-group" a:if="{{item.type=='input'}}">
       <view class="title">
         <text class="cuIcon-circlefill text-grey margin-right"></text>{{item.text}}</view>
-      <input data-name="{{item.name}}" onBlur="onblur" placeholder="请输入"></input>
+      <input data-name="{{item.name}}" onBlur="onblur" placeholder="请输入" value="{{data[item.name]}}"></input>
     </view>
     <!-- textarea -->
     <view class="cu-form-group align-start" a:if="{{item.type=='textarea'}}" data-name="{{item.name}}">
       <view class="title">
         <text class="cuIcon-circlefill text-grey margin-right"></text>{{item.text}}</view>
-      <textarea data-name="{{item.name}}" onBlur="onblur" placeholder="请输入"></textarea>
+      <textarea data-name="{{item.name}}" onBlur="onblur" placeholder="请输入" value="{{data[item.name]}}"></textarea>
     </view>
     <!-- switch -->
     <view class="cu-form-group" a:if="{{item.type=='switch'}}" >
       <view class="title">
         <text class="cuIcon-circlefill text-grey margin-right"></text>{{item.text}}</view>
-      <switch data-name="{{item.name}}" onChange="onblur"></switch>
+      <switch data-name="{{item.name}}" onChange="onblur" checked="{{data[item.name]}}"></switch>
     </view>
   </block>
 </view>

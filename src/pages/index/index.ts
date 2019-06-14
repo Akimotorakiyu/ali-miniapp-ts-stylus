@@ -4,7 +4,9 @@ Page({
   data() {
     return {
       data:{
-
+        input:"我是厨师值哦",
+        textarea:"我是谁？",
+        switch:true
       },
       form: [{
         type: "text",

@@ -6,4 +6,4 @@
   </view>
 </view>
 
-<common-form form="{{form}}" onChange="change"></common-form>
+<common-form form="{{form}}" onChange="change" data="{{data}}"></common-form>
