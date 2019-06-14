@@ -1,20 +1,25 @@
 Component({
     mixins: [],
-    data: {
-        formData:{
+    data() {
+        return {
+            formData: {
 
+            }
         }
     },
     props: {
         onChange() {
             console.log(this.data)
         },
-        form:[],
-        defaultData:{}
+        form: [],
+        defaultData: {}
+    },
+    onInit() {
+
     },
     didMount() {
         this.setData({
-            formData:this.props.defaultData
+            formData: this.props.defaultData
         })
     },
     didUpdate() {

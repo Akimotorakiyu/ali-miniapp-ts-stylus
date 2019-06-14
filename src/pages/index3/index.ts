@@ -1,8 +1,10 @@
 let app = getApp()
 
 Page({
-    data: {
-    },
+  data(){
+    return {
+    }
+  },
     onItemClick(ev) {
       my.alert({
           title:"aaaa",

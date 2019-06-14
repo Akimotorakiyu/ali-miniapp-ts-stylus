@@ -1,7 +1,9 @@
 Component({
     mixins: [],
-    data: {
-        formData: {}
+    data() {
+        return {
+            formData: {}
+        };
     },
     props: {
         onChange() {
@@ -9,6 +11,8 @@ Component({
         },
         form: [],
         defaultData: {}
+    },
+    onInit() {
     },
     didMount() {
         this.setData({
