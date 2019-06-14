@@ -2,6 +2,7 @@ let app = getApp();
 Page({
     data() {
         return {
+            data: {},
             form: [{
                     type: "text",
                     mode: "",
@@ -54,11 +55,8 @@ Page({
     },
     change(data) {
         console.log(data);
-    },
-    onItemClick(ev) {
-        my.alert({
-            title: "aaaa",
-            content: ev.detail.index,
+        this.setData({
+            [`data.${data.name}`]: data.value
         });
     },
 });
