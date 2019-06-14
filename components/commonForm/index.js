@@ -1,16 +1,14 @@
 Component({
     mixins: [],
     data() {
-        return {
-            formData: {}
-        };
+        return {};
     },
     props: {
         onChange() {
             console.log(this.data);
         },
         form: [],
-        defaultData: {}
+        value: {}
     },
     onInit() {
     },
@@ -24,5 +22,13 @@ Component({
     },
     didUnmount() {
     },
-    methods: {}
+    methods: {
+        onblur(event) {
+            console.log(event);
+            this.props.onChange({
+                name: event.target.dataset.name,
+                value: event.detail.value
+            });
+        }
+    }
 });

@@ -2,9 +2,6 @@ Component({
     mixins: [],
     data() {
         return {
-            formData: {
-
-            }
         }
     },
     props: {
@@ -12,7 +9,7 @@ Component({
             console.log(this.data)
         },
         form: [],
-        defaultData: {}
+        value: {}
     },
     onInit() {
 
@@ -30,6 +27,12 @@ Component({
     }
     ,
     methods: {
-
+        onblur(event:tinyapp.ICustomEvent){
+          console.log(event)
+          this.props.onChange({
+              name:event.target.dataset.name,
+              value:event.detail.value
+          })
+      }
     }
 })
