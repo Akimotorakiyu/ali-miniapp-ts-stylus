@@ -43,5 +43,12 @@
       <view  data-name="{{item.name}}" data-format="{{item.format}}" onTap="dataPicker" class="form-content">
         <view class="content">{{data[item.name]?data[item.name]:"请选择"}}</view></view>
     </view>
+     <!-- silder -->
+    <view class="cu-form-group" a:if="{{item.type=='silder'}}">
+      <view class="title">
+       {{item.text}}
+      </view>
+      <slider data-name="{{item.name}}" value="{{data[item.name]}}" onChange="onblur" step="{{item.step}}" min="{{item.min}}" max="{{item.max}}" />
+    </view>
   </block>
 </view>

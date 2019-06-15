@@ -13,3 +13,9 @@
   width: 100%;
   text-align: right;
 }
+.cu-form-group slider {
+  flex: 1;
+  font-size: 30rpx;
+  color: #555;
+  padding-right: 20rpx;
+}

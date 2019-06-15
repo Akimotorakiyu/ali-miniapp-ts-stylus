@@ -55,14 +55,17 @@ Page({
         type: "switch",
         mode: "",
         name: "switch",
-        text: "switch",
+        text: "开关",
         icon: ""
       },
       {
-        type: "upload",
+        type: "silder",
         mode: "",
-        name: "upload",
-        text: "上传",
+        name: "silder",
+        text: "滑块",
+        step:4,
+        min:0,
+        max:100,
         icon: ""
       }],
       selection: {
