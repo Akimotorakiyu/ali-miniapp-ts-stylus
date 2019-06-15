@@ -48,6 +48,17 @@ Component({
                     }
                 },
             });
-        }
+        },
+        dataPicker(event) {
+            my.datePicker({
+                format: event.target.dataset.format || "yyyy-MM-dd",
+                success: (res) => {
+                    this.props.onChange({
+                        name: event.target.dataset.name,
+                        value: res.date
+                    });
+                }
+            });
+        },
     }
 });

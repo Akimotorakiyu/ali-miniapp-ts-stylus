@@ -46,6 +46,7 @@ Page({
                     type: "date",
                     mode: "",
                     name: "date",
+                    format: "",
                     text: "日期",
                     icon: ""
                 },

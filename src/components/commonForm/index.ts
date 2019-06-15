@@ -10,7 +10,7 @@ Component({
         },
         form: [],
         data: {},
-        selection:{}
+        selection: {}
     },
     onInit() {
 
@@ -33,26 +33,38 @@ Component({
                 value: event.detail.value
             })
         },
-        select(event:tinyapp.ICustomEvent){
+        select(event: tinyapp.ICustomEvent) {
             console.log(event)
-            let items=event.target.dataset.label?this.props.selection[event.target.dataset.name].map((ele)=>(ele[event.target.dataset.label])):this.props.selection[event.target.dataset.name];
+            let items = event.target.dataset.label ? this.props.selection[event.target.dataset.name].map((ele) => (ele[event.target.dataset.label])) : this.props.selection[event.target.dataset.name];
             my.showActionSheet({
                 title: '请选择',
-                items: items||[],
+                items: items || [],
                 success: (res) => {
                     if (res.index >= 0) {
                         this.props.onChange({
                             name: event.target.dataset.name,
-                            value:this.props.selection[event.target.dataset.name][res.index]
+                            value: this.props.selection[event.target.dataset.name][res.index]
                         })
-                    }else{
+                    } else {
                         this.props.onChange({
                             name: event.target.dataset.name,
-                            value:null
+                            value: null
                         })
                     }
                 },
             });
-        }
+        },
+        dataPicker(event: tinyapp.ICustomEvent) {
+            my.datePicker({
+                format:event.target.dataset.format as string||"yyyy-MM-dd",
+                success: (res) => {
+                    this.props.onChange({
+                        name: event.target.dataset.name,
+                        value: res.date
+                    })
+                }
+            }
+            )
+        },
     }
 })

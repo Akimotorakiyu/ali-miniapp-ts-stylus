@@ -35,5 +35,13 @@
       <view  data-name="{{item.name}}" data-label="{{item.label}}" onTap="select" class="form-content">
         <view class="content">{{data[item.name]?item.label?data[item.name][item.label]:data[item.name]:"请选择"}}</view></view>
     </view>
+    <!-- datePicker -->
+    <view class="cu-form-group" a:if="{{item.type=='date'}}">
+      <view class="title">
+       {{item.text}}
+      </view>
+      <view  data-name="{{item.name}}" data-format="{{item.format}}" onTap="dataPicker" class="form-content">
+        <view class="content">{{data[item.name]?data[item.name]:"请选择"}}</view></view>
+    </view>
   </block>
 </view>
