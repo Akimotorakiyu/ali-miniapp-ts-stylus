@@ -3,10 +3,10 @@ let app = getApp()
 Page({
   data() {
     return {
-      data:{
-        input:"我是厨师值哦",
-        textarea:"我是谁？",
-        switch:true
+      data: {
+        input: "我是厨师值哦",
+        textarea: "我是谁？",
+        switch: true,
       },
       form: [{
         type: "text",
@@ -36,6 +36,14 @@ Page({
         icon: ""
       },
       {
+        type: "picker",
+        mode: "",
+        name: "picker2",
+        text: "选择器2",
+        label:"label",
+        icon: ""
+      },
+      {
         type: "date",
         mode: "",
         name: "date",
@@ -55,14 +63,18 @@ Page({
         name: "upload",
         text: "上传",
         icon: ""
-      }]
+      }],
+      selection: {
+        picker: ["picker-1","picker-2","picker-3"],
+        picker2: [{label:"picker-1"},{label:"picker-2"},{label:"picker-3"}],
+      }
     }
   },
   change(data) {
     console.log(data)
 
     this.setData({
-      [`data.${data.name}`]:data.value
+      [`data.${data.name}`]: data.value
     })
   },
 

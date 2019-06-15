@@ -2,8 +2,9 @@
 
 <view class="cu-bar bg-white ">
   <view class="action">
-    <text>我是 colourUI bar</text>
+  <text class="cuIcon-title text-green"></text>
+    <text>表单组件</text>
   </view>
 </view>
 
-<common-form form="{{form}}" onChange="change" data="{{data}}"></common-form>
+<common-form form="{{form}}" onChange="change" data="{{data}}" selection="{{selection}}"></common-form>
