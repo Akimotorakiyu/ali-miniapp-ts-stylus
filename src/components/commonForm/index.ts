@@ -45,6 +45,11 @@ Component({
                             name: event.target.dataset.name,
                             value:this.props.selection[event.target.dataset.name][res.index]
                         })
+                    }else{
+                        this.props.onChange({
+                            name: event.target.dataset.name,
+                            value:null
+                        })
                     }
                 },
             });
