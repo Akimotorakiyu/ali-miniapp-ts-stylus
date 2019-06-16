@@ -13,12 +13,29 @@ Page({
                     name: "text",
                     text: "文字",
                     icon: ""
-                }, {
+                },
+                {
                     type: "input",
                     mode: "",
                     name: "input",
                     text: "输入",
                     icon: ""
+                },
+                {
+                    type: "input",
+                    mode: "",
+                    name: "password",
+                    text: "密码",
+                    icon: "",
+                    password: true
+                },
+                {
+                    type: "input",
+                    mode: "",
+                    name: "password",
+                    text: "数字",
+                    icon: "",
+                    inputType: "digit"
                 },
                 {
                     type: "textarea",

@@ -14,12 +14,31 @@ Page({
         name: "text",
         text: "文字",
         icon: ""
-      }, {
+      },
+
+      {
         type: "input",
         mode: "",
         name: "input",
         text: "输入",
         icon: ""
+      },
+      {
+        type: "input",
+        mode: "",
+        name: "password",
+        text: "密码",
+        icon: "",
+        password: true
+      },
+
+      {
+        type: "input",
+        mode: "",
+        name: "password",
+        text: "数字",
+        icon: "",
+        inputType: "digit"
       },
       {
         type: "textarea",
@@ -40,14 +59,14 @@ Page({
         mode: "",
         name: "picker2",
         text: "选择器2",
-        label:"label",
+        label: "label",
         icon: ""
       },
       {
         type: "date",
         mode: "",
         name: "date",
-        format:"",
+        format: "",
         text: "日期",
         icon: ""
       },
@@ -63,14 +82,14 @@ Page({
         mode: "",
         name: "silder",
         text: "滑块",
-        step:4,
-        min:0,
-        max:100,
+        step: 4,
+        min: 0,
+        max: 100,
         icon: ""
       }],
       selection: {
-        picker: ["picker-1","picker-2","picker-3"],
-        picker2: [{label:"picker-1"},{label:"picker-2"},{label:"picker-3"}],
+        picker: ["picker-1", "picker-2", "picker-3"],
+        picker2: [{ label: "picker-1" }, { label: "picker-2" }, { label: "picker-3" }],
       }
     }
   },

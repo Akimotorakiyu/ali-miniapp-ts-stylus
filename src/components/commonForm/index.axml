@@ -11,7 +11,7 @@
       <view class="title">
         {{item.text}}
       </view>
-      <input data-name="{{item.name}}" onBlur="onblur" placeholder="请输入" value="{{data[item.name]}}"></input>
+      <input data-name="{{item.name}}" onBlur="onblur" placeholder="请输入" value="{{data[item.name]}}" type="{{item.inputType||'text'}}" password="{{item.password||false}}"></input>
     </view>
     <!-- textarea -->
     <view class="cu-form-group align-start" a:if="{{item.type=='textarea'}}" data-name="{{item.name}}">
