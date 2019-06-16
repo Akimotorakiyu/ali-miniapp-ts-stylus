@@ -48,7 +48,7 @@
       <view class="title">
        {{item.text}}
       </view>
-      <slider data-name="{{item.name}}" value="{{data[item.name]}}" onChange="onblur" step="{{item.step}}" min="{{item.min}}" max="{{item.max}}" />
+      <slider data-name="{{item.name}}" value="{{data[item.name]}}" onChange="onblur" step="{{item.step}}" min="{{item.min}}" max="{{item.max}}" show-value="{{true}}"/>
     </view>
   </block>
 </view>
