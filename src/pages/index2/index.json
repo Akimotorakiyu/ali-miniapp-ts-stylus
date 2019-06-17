@@ -1,5 +1,5 @@
 {
   "usingComponents":{
-    "grid":"mini-antui/es/grid/index"
+    "common-button":"../../components/button/index"
   }
 }
