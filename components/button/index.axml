@@ -1,1 +1,1 @@
-<button class="{{class}}" onTap="taptap" disabled="{{disabled}}"><text a:if="{{loading}}"  class="cuIcon-loading2 iconfont-spin"></text>{{text}}</button>
+<button class="{{class}}" onTap="taptap" disabled="{{disabled}}"><text a:if="{{loading}}"  class="cuIcon-loading2 iconfont-spin"></text><slot>按钮</slot></button>

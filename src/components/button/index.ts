@@ -15,7 +15,6 @@ Component({
             })
         },
         class:"cu-btn round bg-blue",
-        text: "按钮",
         confirm: false,
         confirmContent: "是否确认"
     },
