@@ -8,9 +8,6 @@ Component({
     },
     props: {
         async onTap() {
-
-            console.log("按下按钮")
-
             return new Promise(function (resolve, reject) {
                 setTimeout(function () {
                     resolve('foo');
@@ -18,6 +15,8 @@ Component({
             })
         },
         text: "按钮",
+        confirm: false,
+        confirmContent: "是否确认"
     },
     didMount() {
 
@@ -32,6 +31,9 @@ Component({
     methods: {
         async taptap() {
             try {
+                if (this.props.confirm) {
+                    await this.confirm()
+                }
                 this.setData({
                     loading: true,
                     disabled: true
@@ -45,6 +47,25 @@ Component({
                     disabled: false
                 })
             }
+        },
+        confirm() {
+            return new Promise((resolve, reject) => {
+                my.confirm({
+                    title: "提示",
+                    content: this.props.confirmContent,
+                    success(res) {
+                        if (res.confirm) {
+                            resolve()
+                        } else {
+                            reject()
+                        }
+                    },
+                    fail(res) {
+                        console.log(res)
+                        reject()
+                    }
+                })
+            })
         }
     }
 })
