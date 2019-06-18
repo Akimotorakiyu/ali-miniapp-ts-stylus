@@ -7,31 +7,36 @@ Page({
         icon: 'https://www.easyicon.net/api/resizeApi.php?id=1233661&size=128',
         text: '报表',
         accessId: "accessId0",
-        path: "./index"
+        path: "./index",
+        badge:1
       },
       {
         icon: 'https://www.easyicon.net/api/resizeApi.php?id=1210079&size=128',
         text: '项目记录',
         accessId: "accessId1",
-        path: "./index"
+        path: "./index",
+        badge:2
       },
       {
         icon: 'https://www.easyicon.net/api/resizeApi.php?id=1210083&size=128',
         text: '项目记录',
         accessId: "accessId2",
-        path: "./index"
+        path: "./index",
+        badge:3
       },
       {
         icon: 'https://www.easyicon.net/api/resizeApi.php?id=1210090&size=128',
         text: '项目记录',
         accessId: "accessId3",
-        path: "./index"
+        path: "./index",
+        badge:4
       },
       {
         icon: 'https://www.easyicon.net/api/resizeApi.php?id=1210078&size=128',
         text: '项目记录',
         accessId: "accessId4",
-        path: "./index"
+        path: "./index",
+        badge:5
       },
       {
         icon: 'https://www.easyicon.net/api/resizeApi.php?id=1210074&size=128',
