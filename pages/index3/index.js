@@ -62,11 +62,5 @@ Page({
                 accessId7: true,
             }
         };
-    },
-    onItemClick(ev) {
-        my.alert({
-            title: "aaaa",
-            content: ev.detail.index,
-        });
-    },
+    }
 });
