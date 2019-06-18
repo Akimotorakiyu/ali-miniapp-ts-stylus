@@ -2,7 +2,7 @@
 
 本模板采用`typescript`,`stylus`。
 
-集成请求库[`wefech`](https://github.com/jonnyshao/wefetch)，集成组件库[`mini-antui`](https://github.com/ant-mini-program/mini-antui)，集成样式库[`ColorUI`](https://github.com/weilanwl/ColorUI)
+集成请求库[`wefech`](https://github.com/jonnyshao/wefetch)，集成组件库[`mini-antui`](https://github.com/ant-mini-program/mini-antui)，集成样式库[`ColorUI`](https://github.com/weilanwl/ColorUI)，集成[`Font Awesome`](https://github.com/FortAwesome/Font-Awesome)
 
 ## 使用方法
 
