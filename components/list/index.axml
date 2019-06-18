@@ -1,69 +1,67 @@
- <view class="cu-list menu sm-border {{menuCard?'card-menu':''}}">
- <!-- info -->
-  <view class="cu-item">
+<view class="cu-list menu sm-border {{menuCard?'card-menu':''}}">
+  <!-- info -->
+  <block a:for="{{menuList}}">
+    <view class="cu-item" a:if="{{item.type=='info'}}">
       <view class="content">
-        <text class="cuIcon-warn text-green"></text>
-        <text class="text-grey">文本</text>
+        <text class="{{item.icon||'cuIcon-info text-gray'}}"></text>
+        <!-- <image src="/images/logo.png" class="png" mode="aspectFit"></image> -->
+        <text class="text-grey">{{item.title}}</text>
       </view>
       <view class="action">
-        <text class="text-grey text-sm">小目标还没有实现！</text>
+        <text class="text-grey text-sm">{{item.info}}</text>
       </view>
     </view>
-
     <!-- tag -->
-    <view class="cu-item {{menuArrow?'arrow':''}}">
+    <view class="cu-item" a:if="{{item.type=='tag'}}">
       <view class="content">
-        <text class="cuIcon-tagfill text-red"></text>
-        <text class="text-grey">标签</text>
+        <text class="{{item.icon||'cuIcon-tagfill text-red'}}"></text>
+        <text class="text-grey">{{item.title}}</text>
       </view>
       <view class="action">
-        <view class="cu-tag round bg-orange light">音乐</view>
-        <view class="cu-tag round bg-olive light">电影</view>
-        <view class="cu-tag round bg-blue light">旅行</view>
+        <view a:for="{{item.info}}" class="cu-tag round {{item.class}}">{{item.text}}</view>
       </view>
     </view>
-
-<!-- Navigator -->
-    <view class="cu-item arrow">
-      <navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
-        <text class="cuIcon-discoverfill text-orange"></text>
-        <text class="text-grey">Navigator 跳转</text>
+    <!-- Navigator -->
+    <view class="cu-item arrow" a:if="{{item.type=='navigator'}}">
+      <navigator class="content" hover-class="none" url="{{item.path}}">
+        <text class="{{item.icon||'cuIcon-link text-green'}}"></text>
+        <!-- <image src="/images/logo.png" class="png" mode="aspectFit"></image> -->
+        <text class="text-grey">{{item.info}}</text>
       </navigator>
     </view>
-
-     <view class="cu-item arrow">
-      <navigator class="content" hover-class="none" url="../list/list" open-type="redirect">
-        <image src="/images/logo.png" class="png" mode="aspectFit"></image>
-        <text class="text-grey">图片Navigator 跳转</text>
-      </navigator>
-    </view>
-
     <!-- button -->
-   
-    <view class="cu-item {{menuArrow?'arrow':''}}">
+    <!-- <view class="cu-item {{menuArrow?'arrow':''}}" a:if="{{item.type=='button'}}">
       <view class="content">
-        <text class="cuIcon-btn text-green"></text>
-        <text class="text-grey">按钮</text>
+        <text class="{{item.icon||'cuIcon-btn text-blue'}}"></text>
+        <text class="text-grey">{{item.title}}</text>
       </view>
       <view class="action">
         <button class="cu-btn round bg-green shadow">
-          <text class="cuIcon-upload"></text> 上传</button>
+          <text class="cuIcon-upload"></text> {{item.info}}</button>
       </view>
-    </view>
+    </view> -->
 
-
-<!-- switch -->
-   
-    <view class="cu-item">
+    <!-- switch -->
+    <!-- <view class="cu-item" a:if="{{item.type=='switch'}}">
       <view class="content padding-tb-sm">
         <view>
-          <text class="cuIcon-clothesfill text-blue margin-right-xs"></text> 多行Item</view>
-        <view class="text-gray text-sm">
-          <text class="cuIcon-infofill margin-right-xs"></text> 小目标还没有实现！</view>
+          <text class="{{item.icon||'cuIcon-roundcheck text-orange'}}"></text> {{item.title}}</view>
       </view>
       <view class="action">
-        <switch class="switch-sex sm" bindchange="switchSex"></switch>
+        <switch class="switch-sex sm" bindchange="change"></switch>
+      </view>
+    </view> -->
+    <!-- solt -->
+    <view class="cu-item {{menuArrow?'arrow':''}}" a:if="{{item.type=='slot'}}">
+      <view class="content">
+        <text class="{{item.icon||'cuIcon-lightauto text-blue'}}"></text>
+        <text class="text-grey">{{item.title}}</text>
+      </view>
+      <view class="action">
+        <slot info="{{item.info}}" name="{{item.slotName}}">
+           <text class="text-grey">{{item.info}}</text>
+        </slot>
       </view>
     </view>
-
-  </view>
+  </block>
+</view>

@@ -7,6 +7,7 @@ Component({
         onChange() {
             console.log(this.data);
         },
+        menuList: []
     },
     didMount() {
     },

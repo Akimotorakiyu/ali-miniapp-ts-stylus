@@ -1,4 +1,9 @@
 报表
 
-<common-list></common-list>
+<common-list menuList="{{menuList}}">
+
+<text slot="slot1" slot-scope="props">slot1{{props.info}}</text>
+<text slot="slot2" slot-scope="props">slot2{{props.info}}</text>
+
+</common-list>
 
