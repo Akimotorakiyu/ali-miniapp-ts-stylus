@@ -15,7 +15,8 @@ Component({
             });
         },
         confirm: false,
-        confirmContent: "是否确认"
+        confirmContent: "是否确认",
+        btnClass: "cu-btn round bg-blue"
     },
     didMount() {
     },
