@@ -14,7 +14,6 @@ Component({
                 }, 3000);
             })
         },
-        class:"cu-btn round bg-blue",
         confirm: false,
         confirmContent: "是否确认"
     },

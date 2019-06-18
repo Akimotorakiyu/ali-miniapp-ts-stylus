@@ -1,1 +1,11 @@
-我是grid
+<view class="cu-bar bg-white" a:if="{{title.length>0}}">
+  <view class="action" style="color:#000">
+		{{title}}
+  </view>
+</view>
+<view class="cu-list grid col-4 no-border">
+  <view class="cu-item" a:for="{{items}}" a:if="{{accessControl?access[item.accessId]:true}}" onTap="onItemClick" data-index="{{index}}">
+    <image src="{{item.icon}}" style="width:32px;margin:auto;height:32px" mode="aspectFit" />
+    <text style="color:#000">{{item.text}}</text>
+  </view>
+</view>

@@ -1,2 +1,6 @@
 首页
-<common-grid></common-grid>
+<common-grid title="" items="{{items}}"></common-grid>
+
+<view class="margin-top">
+<common-grid title="这是权限控制示例" items="{{items}}" access="{{access}}" accessControl="{{true}}"></common-grid>
+</view>
