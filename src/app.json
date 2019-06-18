@@ -26,26 +26,26 @@
         "pagePath": "pages/index/index",
         "icon": "assets/tabbarIcon/shop_gray.png",
         "activeIcon": "assets/tabbarIcon/shop.png",
-        "name": "消息"
+        "name": "form"
       },
       {
         "pagePath": "pages/index2/index",
         "icon": "assets/tabbarIcon/editFile_gray.png",
         "activeIcon": "assets/tabbarIcon/editFile.png",
-        "name": "记录"
+        "name": "button"
       },
       {
         "pagePath": "pages/index3/index",
          "icon": "assets/tabbarIcon/diamond_gray.png",
         "activeIcon": "assets/tabbarIcon/diamond.png",
         
-        "name": "首页"
+        "name": "grid"
       },
       {
         "pagePath": "pages/index4/index",
        "icon": "assets/tabbarIcon/list2_gray.png",
         "activeIcon": "assets/tabbarIcon/list2.png",
-        "name": "报表"
+        "name": "list"
       },
       {
         "pagePath": "pages/index5/index",
