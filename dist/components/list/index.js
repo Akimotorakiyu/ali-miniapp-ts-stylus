@@ -8,6 +8,8 @@ Component({
             console.log(this.data);
         },
         items: [],
+        accessControl: false,
+        access: {},
         title: ""
     },
     didMount() {
