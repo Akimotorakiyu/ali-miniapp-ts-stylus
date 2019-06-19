@@ -4362,7 +4362,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: normal;
   font-display: auto;
-  src:  url("/style//fontawesome/webfonts/fa-brands-400.woff2") format("woff2")}
+  src:  url("./style/fontawesome/webfonts/fa-brands-400.woff2") format("woff2")}
 
 .fab {
   font-family: 'Font Awesome 5 Brands'; }
@@ -4371,7 +4371,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url("/style/fontawesome/webfonts/fa-regular-400.woff2") format("woff2")}
+  src: url("./style/fontawesome/webfonts/fa-regular-400.woff2") format("woff2")}
 
 .far {
   font-family: 'Font Awesome 5 Free';
@@ -4381,7 +4381,7 @@ readers do not read off random characters that represent icons */
   font-style: normal;
   font-weight: 900;
   font-display: auto;
-  src:  url("/style/fontawesome/webfonts/fa-solid-900.woff2") format("woff2")}
+  src:  url("./style/fontawesome/webfonts/fa-solid-900.woff2") format("woff2")}
 
 .fa,
 .fas {

@@ -19,13 +19,13 @@ yarn dev
 2. 开发
 
   * VS code打开本项目。
-  * 阿里小程序开发工具打开本项目。
+  * 阿里小程序开发工具打开本项目`dist/`。
 
 ## 注意事项
 
 ### gulp构建相关
 
-开发目录位于`src/`，保存时`gulp`会编译复制`src/**/*.styl`和`src/**/*.ts`、复制`src/**/!(*.styl|*.ts|*.d.ts)`到`./`目录下。
+开发目录位于`src/`，保存时`gulp`会编译复制`src/**/*.styl`和`src/**/*.ts`、复制`src/**/!(*.styl|*.ts|*.d.ts)`到`dist/`目录下。
 
 其它注意事项可以查看`gulpfile.ts`
 

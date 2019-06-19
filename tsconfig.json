@@ -4,7 +4,7 @@
         "lib": ["es2017", "dom"],
         "allowUnusedLabels": true,
         "moduleResolution": "node",
-        "outDir": "pages"
+        "outDir": "dist"
     },
     "include": ["src/**/*","types/**/*"],
     "exclude": ["node_modules",".tea"]

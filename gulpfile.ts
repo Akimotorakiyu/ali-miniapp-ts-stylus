@@ -11,7 +11,7 @@ import { FSWatcher } from "fs";
 
 let tsProject = ts.createProject("tsconfig.json");
 
-const dist = "./"
+const dist = "./dist/"
 
 function acss() {
     return gulp.src(`src/**/*.styl`)
