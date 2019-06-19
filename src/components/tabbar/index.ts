@@ -8,7 +8,9 @@ Component({
         onChange() {
             console.log(this.data)
         },
-        items:[]
+        items:[],
+        accessControl:false,
+        access: {},
     },
     didMount() {
       

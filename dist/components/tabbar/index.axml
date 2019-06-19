@@ -18,24 +18,27 @@
 </view>
 
 
-<view class="cu-bar tabbar bg-white" style="position:fixed;width:100%;bottom:0px;">
+<view class="cu-bar tabbar bg-white" style="position:fixed;width:100%;bottom:0px;" a:if="{{items.length>0}}">
     <block a:for="{{items}}">
-        <view class="action" a:if="{{item.type=='navigator'}}">
+        <block  a:if="{{accessControl?access[item.accessId]:true}}">
+            <view class="action" a:if="{{item.type=='navigator'}}">
       
-            <navigator  hover-class="none" url="{{item.path}}">
-                <view class="{{item.icon||'cuIcon-creative text-olive'}}">
-                </view>
-                <view class="text-green">{{item.title}}</view>
-            </navigator>
-        </view>
-
-
-     <!-- solt -->
-        <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}"  a:if="{{item.type=='slot'}}">
-            <view class="action" name="{{item.slotName}}">
-                <view class="{{item.icon||'cuIcon-creative text-olive'}}"></view>
-                <view class="text-green">{{item.title}}</view>
+                <navigator  hover-class="none" url="{{item.path}}">
+                    <view class="{{item.icon||'cuIcon-creative text-olive'}}">
+                    </view>
+                    <view class="text-green">{{item.title}}</view>
+                </navigator>
             </view>
-        </slot>
+
+
+            <!-- solt -->
+            <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}"  a:if="{{item.type=='slot'}}">
+                <view class="action" name="{{item.slotName}}">
+                    <view class="{{item.icon||'cuIcon-creative text-olive'}}"></view>
+                    <view class="text-green">{{item.title}}</view>
+                </view>
+            </slot>
+        </block>
+        
     </block>
 </view>

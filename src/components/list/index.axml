@@ -1,6 +1,13 @@
+<view class="cu-bar bg-white solid-bottom" a:if="{{title.length>0 && items.length>0}}">
+  <view class="action" style="color:#000">
+		{{title}}
+  </view>
+</view>
 <view class="cu-list menu sm-border {{menuCard?'card-menu':''}}">
   <!-- info -->
-  <block a:for="{{menuList}}">
+  <block a:for="{{items}}">
+    <block a:if="{{showControl?item.show:true}}">
+    
     <view class="cu-item" a:if="{{item.type=='info'}}">
       <view class="content">
         <text class="{{item.icon||'cuIcon-info text-gray'}}"></text>
@@ -63,5 +70,7 @@
         </slot>
       </view>
     </view>
+    
+    </block>
   </block>
 </view>

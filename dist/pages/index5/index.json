@@ -1,5 +1,6 @@
 {
   "usingComponents":{
-    "grid":"mini-antui/es/grid/index"
+    "grid":"mini-antui/es/grid/index",
+    "common-tabbar":"../../components/tabbar/index"
   }
 }

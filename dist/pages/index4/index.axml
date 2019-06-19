@@ -1,15 +1,27 @@
 报表
 
-<common-list menuList="{{menuList}}">
+<common-list items="{{menuList}}">
 
-<text slot="slot1" slot-scope="props">slot1{{props.data.info}}</text>
-<text slot="slot2" slot-scope="props">slot2{{props.data.info}}</text>
+    <text slot="slot1" slot-scope="props">slot1{{props.data.info}}</text>
+    <text slot="slot2" slot-scope="props">slot2{{props.data.info}}</text>
 
 </common-list>
+<view class="margin-top bg-gray">
+
+<common-list items="{{menuList}}" access="{{access}}" showControl="{{true}}" title="显示控制">
+
+    <text slot="slot1" slot-scope="props">slot1{{props.data.info}}</text>
+    <text slot="slot2" slot-scope="props">slot2{{props.data.info}}</text>
+
+</common-list>
+</view>
+
 
 
 <common-tabbar items="{{tabbar}}">
 
-<view slot="slot2" slot-scope="props" class="bg-red submit" >slot2-{{props.data.title}}</view>
+    <view slot="slot2" slot-scope="props" class="bg-red submit" >slot2-{{props.data.title}}</view>
 
 </common-tabbar>
+
+
