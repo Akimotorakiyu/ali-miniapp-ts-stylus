@@ -58,7 +58,7 @@
         <text class="text-grey">{{item.title}}</text>
       </view>
       <view class="action">
-        <slot info="{{item.info}}" name="{{item.slotName}}">
+        <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}">
            <text class="text-grey">{{item.info}}</text>
         </slot>
       </view>

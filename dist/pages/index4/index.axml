@@ -2,8 +2,14 @@
 
 <common-list menuList="{{menuList}}">
 
-<text slot="slot1" slot-scope="props">slot1{{props.info}}</text>
-<text slot="slot2" slot-scope="props">slot2{{props.info}}</text>
+<text slot="slot1" slot-scope="props">slot1{{props.data.info}}</text>
+<text slot="slot2" slot-scope="props">slot2{{props.data.info}}</text>
 
 </common-list>
 
+
+<common-tabbar items="{{tabbar}}">
+
+<view slot="slot2" slot-scope="props" class="bg-red submit" >slot2-{{props.data.title}}</view>
+
+</common-tabbar>

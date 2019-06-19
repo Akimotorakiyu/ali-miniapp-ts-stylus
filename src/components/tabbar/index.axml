@@ -1,0 +1,41 @@
+<view class="cu-bar tabbar bg-white" style="visibility:hidden">
+    <view class="action text-green">
+      <view class="cuIcon-creative"></view> 
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-similar"></view> 
+    </view>
+    <view class="action text-gray">
+      <view class="cuIcon-creative">
+      </view>
+    </view>
+
+    <view class="action text-gray">
+      <view class="cuIcon-creative">
+        <view class="cu-tag badge"></view>
+      </view>
+    </view>
+</view>
+
+
+<view class="cu-bar tabbar bg-white" style="position:fixed;width:100%;bottom:0px;">
+    <block a:for="{{items}}">
+        <view class="action" a:if="{{item.type=='navigator'}}">
+      
+            <navigator  hover-class="none" url="{{item.path}}">
+                <view class="{{item.icon||'cuIcon-creative text-olive'}}">
+                </view>
+                <view class="text-green">{{item.title}}</view>
+            </navigator>
+        </view>
+
+
+     <!-- solt -->
+        <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}"  a:if="{{item.type=='slot'}}">
+            <view class="action" name="{{item.slotName}}">
+                <view class="{{item.icon||'cuIcon-creative text-olive'}}"></view>
+                <view class="text-green">{{item.title}}</view>
+            </view>
+        </slot>
+    </block>
+</view>

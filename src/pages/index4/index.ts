@@ -26,7 +26,23 @@ Page({
         type: "tag",
         title: "Info",
         info: [{ text: "Beta", class: "bg-orange light" }, { text: "0.0.1", class: "bg-olive light" }],
-      }]
+      }],
+      tabbar:[{
+        type: "navigator",
+        title:"creative",
+        icon:"cuIcon-creative",
+        path: "./index",
+      },{
+        type: "slot",
+        title: "slot1",
+        icon: "cuIcon-lightauto text-blue",
+        slotName: "slot1"
+      }, {
+        type: "slot",
+        title: "slot2",
+        icon: "cuIcon-lightauto text-blue",
+        slotName: "slot2"
+      },]
     }
   },
 });

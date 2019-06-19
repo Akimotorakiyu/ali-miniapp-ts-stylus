@@ -1,5 +1,6 @@
 {
   "usingComponents":{
-    "common-list":"../../components/list/index"
+    "common-list":"../../components/list/index",
+    "common-tabbar":"../../components/tabbar/index"
   }
 }
