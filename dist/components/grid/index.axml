@@ -11,7 +11,7 @@
         <block a:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
       </view>
     </view>
-    <text style="color:#000">{{item.text}}</text>
+    <text style="color:#000">{{item.title}}</text>
   </view>
 </view>
 

@@ -33,7 +33,6 @@ Component({
                         return true;
                     }
                 });
-                console.log(this.props.title, show);
                 this.setData({
                     show
                 });
