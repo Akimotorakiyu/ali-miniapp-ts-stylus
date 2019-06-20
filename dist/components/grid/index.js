@@ -1,7 +1,9 @@
 Component({
     mixins: [],
     data: function () {
-        return {};
+        return {
+            show: true
+        };
     },
     props: {
         onChange() {
@@ -13,12 +15,30 @@ Component({
         title: "",
     },
     didMount() {
+        this.checkAccessShow();
     },
     didUpdate() {
+        this.checkAccessShow();
     },
     didUnmount() {
     },
     methods: {
+        checkAccessShow() {
+            if (this.props.accessControl) {
+                let show = this.props.items.some(ele => {
+                    if (ele.accessId) {
+                        return this.props.access[ele.accessId] ? true : false;
+                    }
+                    else {
+                        return true;
+                    }
+                });
+                console.log(this.props.title, show);
+                this.setData({
+                    show
+                });
+            }
+        },
         onItemClick(event) {
             my.navigateTo({
                 url: this.props.items[event.target.dataset.index].path,
