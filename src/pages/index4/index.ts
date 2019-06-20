@@ -18,6 +18,7 @@ Page({
         type: "slot",
         title: "slot2",
         info: "我是slot2",
+        icon: 'cuIcon-lightauto text-olive',
         slotName: "slot2",
         accessId: "accessId3"
       }, {
