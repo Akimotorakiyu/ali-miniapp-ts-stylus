@@ -30,10 +30,10 @@
     </view>
     <!-- Navigator -->
     <view class="cu-item arrow" a:if="{{item.type=='navigator'}}">
-      <navigator class="content" hover-class="none" url="{{item.path}}">
+      <navigator class="content" hover-class="none" url="{{item.path}}" open-type="{{item.method||'navigate'}}">
         <text class="{{item.icon||'cuIcon-link text-green'}}"></text>
         <!-- <image src="/images/logo.png" class="png" mode="aspectFit"></image> -->
-        <text class="text-grey">{{item.info}}</text>
+        <text class="text-grey">{{item.title}}</text>
       </navigator>
     </view>
     <!-- button -->
