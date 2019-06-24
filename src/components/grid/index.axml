@@ -5,7 +5,7 @@
   </view>
 </view>
 <view class="cu-list grid col-4 no-border" >
-  <view class="cu-item" a:for="{{items}}" a:if="{{accessControl?access[item.accessId]:true}}" onTap="onItemClick" data-index="{{index}}">
+  <view class="cu-item" a:for="{{items}}" a:if="{{accessControl?access[item.accessId]:true}}" onTap="onItemClick" data-index="{{index}}" data-data="{{item}}">
     <view class="{{item.icon||'cuIcon-lightauto text-blue'}}">
       <view class="cu-tag badge" a:if="{{item.badge && item.badge!=0}}">
         <block a:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
