@@ -1,10 +1,9 @@
-import { access } from "fs";
+import mixins_checkAccessShow from "../mixins/checkAccessShow"
 
 Component({
-    mixins: [],
+    mixins: [mixins_checkAccessShow],
     data: function () {
         return {
-            show:true
         }
     },
     props: {
@@ -29,20 +28,20 @@ Component({
     }
     ,
     methods: {
-        checkAccessShow(){
-            if (this.props.accessControl) {
-                let show=(this.props.items as [{accessId:string}]).some(ele => {
-                    if (ele.accessId) {
-                        return this.props.access[ele.accessId]?true:false
-                    } else {
-                        return true
-                    }
-                })
-                this.setData({
-                    show
-                })
-            }
-        },
+        // checkAccessShow(){
+        //     if (this.props.accessControl) {
+        //         let show=(this.props.items as [{accessId:string}]).some(ele => {
+        //             if (ele.accessId) {
+        //                 return this.props.access[ele.accessId]?true:false
+        //             } else {
+        //                 return true
+        //             }
+        //         })
+        //         this.setData({
+        //             show
+        //         })
+        //     }
+        // },
         onItemClick(event: tinyapp.ICustomEvent) {
             my.navigateTo({
                 url: this.props.items[event.target.dataset.index].path,
