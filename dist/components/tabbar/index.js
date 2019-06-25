@@ -1,5 +1,6 @@
+import mixins_checkAccessShow from "../mixins/checkAccessShow";
 Component({
-    mixins: [],
+    mixins: [mixins_checkAccessShow],
     data: function () {
         return {};
     },
@@ -12,8 +13,10 @@ Component({
         access: {},
     },
     didMount() {
+        this.checkAccessShow();
     },
     didUpdate() {
+        this.checkAccessShow();
     },
     didUnmount() {
     },

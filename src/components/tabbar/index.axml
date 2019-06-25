@@ -1,3 +1,4 @@
+<view class="margin-top" a:if="{{show}}">
 <view class="cu-bar tabbar bg-white" style="visibility:hidden">
     <view class="action text-green">
       <view class="cuIcon-creative"></view> 
@@ -41,4 +42,5 @@
         </block>
         
     </block>
+</view>
 </view>

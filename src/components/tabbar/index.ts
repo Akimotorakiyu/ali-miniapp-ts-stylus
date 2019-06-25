@@ -1,5 +1,7 @@
+import mixins_checkAccessShow from "../mixins/checkAccessShow"
+
 Component({
-    mixins: [],
+    mixins: [mixins_checkAccessShow],
     data: function () {
         return {
         }
@@ -8,15 +10,15 @@ Component({
         onChange() {
             console.log(this.data)
         },
-        items:[],
-        accessControl:false,
+        items: [],
+        accessControl: false,
         access: {},
     },
     didMount() {
-      
+        this.checkAccessShow()
     },
     didUpdate() {
-        
+        this.checkAccessShow()
     },
     didUnmount() {
 

@@ -1,5 +1,6 @@
 {
   "usingComponents":{
-    "common-grid":"../../components/grid/index"
+    "common-grid":"../../components/grid/index",
+    "common-tabbar":"../../components/tabbar/index"
   }
 }
