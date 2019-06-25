@@ -22,13 +22,10 @@
 <view class="cu-bar tabbar bg-white" style="position:fixed;width:100%;bottom:0px;" a:if="{{items.length>0}}">
     <block a:for="{{items}}">
         <block  a:if="{{accessControl?access[item.accessId]:true}}">
-            <view class="action" a:if="{{item.type=='navigator'}}">
-      
-                <navigator  hover-class="none" url="{{item.path}}">
+            <view class="action" a:if="{{item.type=='default'}}" onTap="onItemClick" data-index="{{index}}" data-data="{{item}}">
                     <view class="{{item.icon||'cuIcon-creative text-olive'}}">
                     </view>
                     <view class="text-green">{{item.title}}</view>
-                </navigator>
             </view>
 
 
