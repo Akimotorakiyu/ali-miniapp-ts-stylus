@@ -1,5 +1,7 @@
 消息
 
+<view class="class">此页面允许下拉</view>
+
 <view class="cu-bar bg-white ">
   <view class="action">
   <text class="cuIcon-title text-green"></text>

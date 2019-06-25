@@ -1,4 +1,5 @@
 {
+  "allowsBounceVertical": "YES",
   "usingComponents":{
     "common-form":"../../components/commonForm/index"
   }
