@@ -26,8 +26,6 @@ Component({
     ,
     methods: {
         onItemClick(event: tinyapp.ICustomEvent) {
-            console.log(this.props)
-            
             if (this.props.onItemClick) {
                 this.props.onItemClick(event.target.dataset)
             } else {

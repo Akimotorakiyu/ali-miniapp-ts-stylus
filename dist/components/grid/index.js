@@ -21,7 +21,6 @@ Component({
     },
     methods: {
         onItemClick(event) {
-            console.log(this.props);
             if (this.props.onItemClick) {
                 this.props.onItemClick(event.target.dataset);
             }
