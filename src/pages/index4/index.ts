@@ -34,7 +34,7 @@ Page({
         accessId: "accessId5"
       }],
       tabbar:[{
-        type: "navigator",
+        type: "default",
         title:"creative",
         icon:"cuIcon-creative",
         path: "./index",

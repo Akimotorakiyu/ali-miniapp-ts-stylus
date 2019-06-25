@@ -1,10 +1,10 @@
 <view a:if="{{show}}">
-<view class="cu-bar tabbar bg-white" style="visibility:hidden">
+  <view class="cu-bar tabbar bg-white" style="visibility:hidden">
     <view class="action text-green">
-      <view class="cuIcon-creative"></view> 
+      <view class="cuIcon-creative"></view>
     </view>
     <view class="action text-gray">
-      <view class="cuIcon-similar"></view> 
+      <view class="cuIcon-similar"></view>
     </view>
     <view class="action text-gray">
       <view class="cuIcon-creative">
@@ -16,28 +16,30 @@
         <view class="cu-tag badge"></view>
       </view>
     </view>
-</view>
+  </view>
 
 
-<view class="cu-bar tabbar bg-white" style="position:fixed;width:100%;bottom:0px;" a:if="{{items.length>0}}">
+  <view class="cu-bar tabbar bg-white" style="position:fixed;width:100%;bottom:0px;" a:if="{{items.length>0}}">
     <block a:for="{{items}}">
-        <block  a:if="{{accessControl?access[item.accessId]:true}}">
-            <view class="action" a:if="{{item.type=='default'}}" onTap="onItemClick" data-index="{{index}}" data-data="{{item}}">
-                    <view class="{{item.icon||'cuIcon-creative text-olive'}}">
-                    </view>
-                    <view class="text-green">{{item.title}}</view>
-            </view>
+      <block a:if="{{accessControl?access[item.accessId]:true}}">
 
+        <!-- 基础样式 -->
+        <view class="action" a:if="{{item.type=='default'}}" onTap="onItemClick" data-index="{{index}}"
+          data-data="{{item}}">
+          <view class="{{item.icon||'cuIcon-creative text-olive'}}">
+          </view>
+          <view class="text-green">{{item.title}}</view>
+        </view>
 
-            <!-- solt -->
-            <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}"  a:if="{{item.type=='slot'}}">
-                <view class="action" name="{{item.slotName}}">
-                    <view class="{{item.icon||'cuIcon-creative text-olive'}}"></view>
-                    <view class="text-green">{{item.title}}</view>
-                </view>
-            </slot>
-        </block>
-        
+        <!-- solt -->
+        <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}" a:if="{{item.type=='slot'}}">
+          <view class="action" name="{{item.slotName}}" onTap="onItemClick" data-index="{{index}}" data-data="{{item}}">
+            <view class="{{item.icon||'cuIcon-creative text-olive'}}"></view>
+            <view class="text-green">{{item.title}}</view>
+          </view>
+        </slot>
+      </block>
+
     </block>
-</view>
+  </view>
 </view>

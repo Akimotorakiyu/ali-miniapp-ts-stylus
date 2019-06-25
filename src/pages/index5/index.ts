@@ -4,7 +4,7 @@ Page({
   data(){
     return {
       tabbar:[{
-        type: "navigator",
+        type: "default",
         title:"creative",
         icon:"cuIcon-creative",
         path: "./index",

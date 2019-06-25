@@ -20,8 +20,7 @@ Component({
     },
     didUnmount() {
 
-    }
-    ,
+    },
     methods: {
         onItemClick(event: tinyapp.ICustomEvent) {
             if (this.props.onItemClick) {
