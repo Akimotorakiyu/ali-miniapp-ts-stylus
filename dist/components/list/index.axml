@@ -1,4 +1,4 @@
-<view class="margin-top" a:if="{{show && items.length>0}}">
+<view a:if="{{show && items.length>0}}">
   <view class="cu-bar bg-white solid-bottom" a:if="{{title.length>0 }}">
     <view class="action" style="color:#000">
       {{title}}

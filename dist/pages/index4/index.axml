@@ -6,14 +6,14 @@
     <text slot="slot2" slot-scope="props">slot2{{props.data.info}}</text>
 
 </common-list>
-
+<view class="margin-top"></view>
 <common-list items="{{menuList}}" access="{{access}}" accessControl="{{true}}" title="权限控制">
 
     <text slot="slot1" slot-scope="props">slot1{{props.data.info}}</text>
     <text slot="slot2" slot-scope="props">slot2{{props.data.info}}</text>
 
 </common-list>
-
+<view class="margin-top"></view>
 <view class="class">从这里开始</view>
 <common-list items="{{[{accessId:'no'}]}}" access="{{access}}" accessControl="{{true}}" title="显示控制">
 

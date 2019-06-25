@@ -1,9 +1,9 @@
 首页
 <common-grid   title="这是示例" items="{{items}}" onItemClick="onItemClick"></common-grid>
-
+<view class="margin-top"></view>
 <common-grid title="这是权限控制示例" items="{{items}}" access="{{access}}" accessControl="{{true}}"></common-grid>
 
-
+<view class="margin-top"></view>
 <view class="class">从这里开始</view>
 <common-grid title="显示控制" items="{{[{accessId:'no'}]}}" access="{{access}}" accessControl="{{true}}"></common-grid>
 <view class="class">到这里结束，是显示控制测试</view>
