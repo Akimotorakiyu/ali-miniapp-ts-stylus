@@ -30,12 +30,9 @@ Page({
       }
     }
   },
-  onItemClick(ev) {
-    my.alert({
-      title: "aaaa",
-      content: ev.detail.index,
-    });
-  },
+  onItemClick(info:{index:number,data:any}){
+    console.log(info)
+  }
 
 });
 

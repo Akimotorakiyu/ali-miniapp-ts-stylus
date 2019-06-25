@@ -29,10 +29,7 @@ Page({
             }
         };
     },
-    onItemClick(ev) {
-        my.alert({
-            title: "aaaa",
-            content: ev.detail.index,
-        });
-    },
+    onItemClick(info) {
+        console.log(info);
+    }
 });
