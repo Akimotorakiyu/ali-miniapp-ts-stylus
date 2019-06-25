@@ -4,9 +4,6 @@ Page({
         return {};
     },
     onItemClick(ev) {
-        my.alert({
-            title: "aaaa",
-            content: ev.detail.index,
-        });
+        console.log("测试传函数进去");
     },
 });

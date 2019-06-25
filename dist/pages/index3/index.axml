@@ -1,5 +1,5 @@
 首页
-<common-grid   title="这是示例" items="{{items}}"></common-grid>
+<common-grid   title="这是示例" items="{{items}}" onItemClick="onItemClick"></common-grid>
 
 <common-grid title="这是权限控制示例" items="{{items}}" access="{{access}}" accessControl="{{true}}"></common-grid>
 

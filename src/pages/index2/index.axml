@@ -2,4 +2,4 @@
 
 
 <common-button></common-button>
-<common-button confirm="{{true}}"></common-button>
+<common-button confirm="{{true}}" onTap="onItemClick"></common-button>

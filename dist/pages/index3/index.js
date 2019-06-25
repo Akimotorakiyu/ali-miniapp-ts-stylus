@@ -79,7 +79,10 @@ Page({
                 accessId3: true,
                 accessId5: true,
                 accessId7: true,
-            }
+            },
         };
+    },
+    onItemClick(info) {
+        console.log(info);
     }
 });

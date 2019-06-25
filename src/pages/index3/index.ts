@@ -80,8 +80,12 @@ Page({
         accessId3: true,
         accessId5: true,
         accessId7: true,
-      }
+      },
+      
     }
+  },
+  onItemClick(info:{index:number,data:any}){
+    console.log(info)
   }
 });
 
