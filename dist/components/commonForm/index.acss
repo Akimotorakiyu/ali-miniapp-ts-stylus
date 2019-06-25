@@ -1,5 +1,6 @@
 .cu-form-group .form-content {
-  flex: 1;
+  -webkit-box-flex: 1;
+          flex: 1;
   padding-right: 40rpx;
   overflow: hidden;
   position: relative;
@@ -14,7 +15,8 @@
   text-align: right;
 }
 .cu-form-group slider {
-  flex: 1;
+  -webkit-box-flex: 1;
+          flex: 1;
   font-size: 30rpx;
   color: #555;
   padding-right: 20rpx;

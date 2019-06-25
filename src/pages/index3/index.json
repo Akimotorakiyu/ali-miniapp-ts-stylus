@@ -1,6 +1,7 @@
 {
   "usingComponents":{
     "common-grid":"../../components/grid/index",
+    "common-card":"../../components/cardList/index",
     "common-tabbar":"../../components/tabbar/index"
   }
 }

@@ -8,7 +8,14 @@
 <common-grid title="显示控制" items="{{[{accessId:'no'}]}}" access="{{access}}" accessControl="{{true}}"></common-grid>
 <view class="class">到这里结束，是显示控制测试</view>
 
+
+
+<common-card   title="这是示例" items="{{items}}" onItemClick="onItemClick"></common-card>
+
+
+
 <view class="class">底部是tabbar的显示控制</view>
+
 
 
 <common-tabbar items="{{[{accessId:'no'}]}}" access="{{access}}" accessControl="{{true}}">
@@ -16,3 +23,4 @@
     <view slot="slot2" slot-scope="props" class="bg-red submit" >slot2-{{props.data.title}}</view>
 
 </common-tabbar>
+
