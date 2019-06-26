@@ -4,7 +4,20 @@
 <common-button></common-button>
 <common-button confirm="{{true}}" onTap="onItemClick"></common-button>
 
-<common-miniphotolist items="{{items}}">
-        <view slot="extra" slot-scope="props" class="text-grey text-xs">{{props.data.title}}</view>
-        <view slot="extra" slot-scope="props" class="cu-tag round bg-grey sm">{{props.data.desc}}</view>
+<common-miniphotolist items="{{items}}" type="list">
+        <view slot="extra" slot-scope="props" class="text-grey text-xs">插槽</view>
+        <view slot="extra" slot-scope="props" class="cu-tag round bg-grey sm">插槽插槽</view>
+</common-miniphotolist>
+
+<common-miniphotolist items="{{items}}" type="avatar">
+        <view slot="extra" slot-scope="props" class="text-grey text-xs">插槽</view>
+        <view slot="extra" slot-scope="props" class="cu-tag round bg-grey sm">插槽插槽</view>
+</common-miniphotolist>
+
+<common-miniphotolist items="{{items}}" type="list3">
+       
+</common-miniphotolist>
+
+<common-miniphotolist items="{{items}}" type="list4">
+       
 </common-miniphotolist>

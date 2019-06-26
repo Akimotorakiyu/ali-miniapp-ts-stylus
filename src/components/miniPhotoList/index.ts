@@ -11,7 +11,7 @@ Component({
         items:[],
     },
     didMount() {
-      
+      console.log(this.props)
     },
     didUpdate() {
         

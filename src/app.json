@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/index2/index",
     "pages/index3/index",
     "pages/index4/index",
     
-    "pages/index2/index",
+   
     "pages/index/index",
     "pages/index5/index"
   ],

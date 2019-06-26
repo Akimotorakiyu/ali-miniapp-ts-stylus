@@ -4,17 +4,49 @@
       {{title}}
     </view>
   </view>
-  <view class="cu-list menu-avatar">
+
+
+
+
+  <view class="cu-list menu" a:if="{{type=='list'}}">
+    <!-- info -->
+    <block a:for="{{items}}">
+
+      <view class="cu-item " onTap="onItemClick" data-index="{{index}}" data-data="{{item}}">
+
+        <view class="content padding-tb-sm">
+          <view class="text-black">
+            <text class="text-cut">{{item.title}}</text>
+          </view>
+          <slot data="{{item}}" index="{{index}}" name="desc">
+            <view class="text-gray text-sm">
+              <text class="text-cut">{{item.desc}}</text>
+
+            </view>
+            <view class="text-gray text-sm">
+              <text class="text-cut">{{item.desc}}</text>
+
+            </view>
+          </slot>
+        </view>
+        <view class="action text-center" catchtap="">
+          <slot data="{{item}}" index="{{index}}" name="extra">
+          </slot>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="cu-list menu-avatar" a:if="{{type=='avatar'}}">
     <!-- info -->
     <block a:for="{{items}}">
       <view class="cu-item " onTap="onItemClick" data-index="{{index}}" data-data="{{item}}">
-        <view class="cu-avatar radius lg"
-          style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+        <view class="cu-avatar radius lg" style="background-image:url({{item.photo}});"></view>
         <view class="content">
           <view class="text-pink">
             <text class="text-cut">{{item.title}}</text>
           </view>
-          <view class="text-gray text-sm flex">
+          <view class="text-gray text-sm">
             <text class="text-cut">{{item.desc}}</text>
           </view>
         </view>
@@ -25,4 +57,61 @@
       </view>
     </block>
   </view>
+
+  <view class="cu-list menu" a:if="{{type=='list3'}}">
+    <!-- info -->
+    <block a:for="{{items}}">
+
+      <view class="cu-item " onTap="onItemClick" data-index="{{index}}" data-data="{{item}}">
+        <view class="image radius padding"
+          style="width:30%;padding-left: 0;padding-top: 0.15rem;padding-bottom: 0.15rem">
+          <image class="radius" src="{{item.photo}}" mode="aspectFill" style="height: 140rpx;"></image>
+        </view>
+        <view class="content padding-tb-sm">
+          <view class="text-black">
+            <text class="text-cut">{{item.title}}</text>
+          </view>
+          <slot data="{{item}}" index="{{index}}" name="desc">
+            <view class="text-gray text-sm">
+              <text class="text-cut">{{item.desc}}没有尾部插槽</text> 
+            </view>
+            <view class="text-gray text-sm">
+              <text class="text-cut">{{item.desc}}没有尾部插槽</text>  
+            </view>
+          </slot>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class="cu-list menu" a:if="{{type=='list4'}}">
+    <!-- info -->
+    <block a:for="{{items}}">
+
+      <view class="cu-item " onTap="onItemClick" data-index="{{index}}" data-data="{{item}}">
+        <view class="image radius padding"
+          style="width:40%;padding-left: 0;padding-top: 0.15rem;padding-bottom: 0.15rem">
+          <image class="radius" src="{{item.photo}}" mode="aspectFill" style="height: 180rpx;"></image>
+        </view>
+        <view class="content padding-tb-sm">
+          <view class="text-black">
+            <text class="text-cut">{{item.title}}</text>
+          </view>
+          <slot data="{{item}}" index="{{index}}" name="desc">
+            <view class="text-gray text-sm">
+              <text class="text-cut">{{item.desc}}没有尾部插槽</text>
+            </view>
+            <view class="text-gray text-sm">
+              <text class="text-cut">{{item.desc}}没有尾部插槽</text>
+            </view>
+            <view class="text-gray text-sm">
+              <text class="text-cut">{{item.desc}}没有尾部插槽</text>
+            </view>
+          </slot>
+        </view>
+      </view>
+    </block>
+  </view>
+
+
 </view>
