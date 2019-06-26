@@ -6,23 +6,25 @@
         <view class="image">
           <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"
             style="height: 220rpx;"></image>
-          <view class="bg-green"
-            style="left:initial;margin:0;border-radius:1em;border:none;display: inline-block;width:45rpx;height:45rpx;position: absolute;top:4rpx;right:4rpx"
-            value="{{true}}" data-index="{{index}}" onChange="mulitSelect">
-            <text class="cuIcon-check" style="margin: 0;padding:0;color: ivory;font-size: 36rpx;"></text>
-          </view>
+          <label class="{{item.selected?'bg-green':'bg-white'}} mulitSelect " a:if="{{selectionControl}}" catchTap=""
+            style="left:initial;margin:0;border-radius:1em;border:none;display: inline-block;width:45rpx;height:45rpx;position: absolute;top:4rpx;right:4rpx">
+            <checkbox class="checkbok"  checked="{{item.selected}}" data-index="{{index}}" data-data="{{item}}"
+              onChange="mulitSelect" ></checkbox>
+            <text a:if="{{item.selected}}" class="cuIcon-check" style="margin: 0;padding:0;color: ivory;font-size: 36rpx;display:inline"></text>
+          </label>
         </view>
-        <view class="content text-left " style="line-height: 1.4;padding: 15rpx">
-          <view class="title" style="margin-bottom: 10rpx">天花板好看，天花板好看，天花板好看</view>
+      </view>
+      <view class="content text-left " style="line-height: 1.4;padding: 15rpx">
+        <view class="title" style="margin-bottom: 10rpx;overflow: hidden;height: 2.8em">{{item.title}}</view>
+        <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}">
           <view class="desc text-grey text-sm">
             <view>问题编号：A</view>
             <view>问题登记：A</view>
-            <view>开始日期：2019-08-10</view>
+            <view>开始日期：2019-08-10哈哈哈哈哈哈哈</view>
             <view>结束日期：2018-12-30</view>
           </view>
-        </view>
+        </slot>
       </view>
     </view>
-</view>
-</block>
+  </block>
 </view>

@@ -24,7 +24,7 @@ Page({
       },],
       items: [{
         icon: 'cuIcon-home text-green',
-        title: '报表',
+        title: '报表啊哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈啊哈哈哈哈哈',
         accessId: "accessId0",
         path: "./index",
         badge:1
@@ -86,6 +86,11 @@ Page({
   },
   onItemClick(info:{index:number,data:any}){
     console.log(info)
+  },
+  onMulitSelect(info:{index:number,data:any,selected:boolean,name:string}){
+    this.setData({
+      [`${info.name}[${info.index}].selected`]:info.selected
+    })
   }
 });
 

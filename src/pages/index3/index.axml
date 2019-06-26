@@ -10,7 +10,7 @@
 
 
 
-<common-card   title="这是示例" items="{{items}}" onItemClick="onItemClick"></common-card>
+<common-card   title="这是示例" items="{{items}}" onItemClick="onItemClick" selectionControl="{{true}}" onMulitSelect="onMulitSelect" name="items"></common-card>
 
 
 

@@ -1,0 +1,3 @@
+.mulitSelect .checkbok {
+  display: none;
+}

@@ -6,9 +6,11 @@ Component({
     },
     props: {
         items: [],
+        onMulitSelect: undefined,
         accessControl: false,
         access: {},
         title: "",
+        name: ""
     },
     didMount() {
         this.checkAccessShow();
@@ -18,5 +20,17 @@ Component({
     },
     didUnmount() {
     },
-    methods: {}
+    methods: {
+        mulitSelect(event) {
+            if (this.props.onMulitSelect) {
+                let temp = event.target.dataset;
+                temp.selected = event.detail.value;
+                temp.name = this.props.name;
+                this.props.onMulitSelect(temp);
+            }
+            else {
+                console.log("选择", event);
+            }
+        }
+    }
 });
