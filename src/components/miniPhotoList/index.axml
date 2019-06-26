@@ -1,0 +1,28 @@
+<view a:if="{{items.length>0}}">
+  <view class="cu-bar bg-white solid-bottom" a:if="{{title.length>0 }}">
+    <view class="action" style="color:#000">
+      {{title}}
+    </view>
+  </view>
+  <view class="cu-list menu-avatar">
+    <!-- info -->
+    <block a:for="{{items}}">
+      <view class="cu-item " onTap="onItemClick" data-index="{{index}}" data-data="{{item}}">
+        <view class="cu-avatar radius lg"
+          style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
+        <view class="content">
+          <view class="text-pink">
+            <text class="text-cut">{{item.title}}</text>
+          </view>
+          <view class="text-gray text-sm flex">
+            <text class="text-cut">{{item.desc}}</text>
+          </view>
+        </view>
+        <view class="action" catchtap="">
+          <slot data="{{item}}" index="{{index}}" name="extra">
+          </slot>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -3,3 +3,8 @@
 
 <common-button></common-button>
 <common-button confirm="{{true}}" onTap="onItemClick"></common-button>
+
+<common-miniphotolist items="{{items}}">
+        <view slot="extra" slot-scope="props" class="text-grey text-xs">{{props.data.title}}</view>
+        <view slot="extra" slot-scope="props" class="cu-tag round bg-grey sm">{{props.data.desc}}</view>
+</common-miniphotolist>
