@@ -10,6 +10,8 @@ Component({
             console.log(this.data);
         },
         tabNav: [],
+        top: 0,
+        bottom: 0
     },
     didMount() {
     },

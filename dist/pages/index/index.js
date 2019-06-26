@@ -89,7 +89,9 @@ Page({
                 picker2: [{ label: "picker-1" }, { label: "picker-2" }, { label: "picker-3" }],
             },
             TabCur: 0,
-            tabNav: ['test1', 'test2', 'test3'],
+            tabNav: [{ title: "测试1", icon: "cuIcon-lightauto text-red", slotName: "test1" },
+                { title: "测试2", icon: "cuIcon-record text-olive", slotName: "test2" },
+                { title: "测试3", icon: "cuIcon-goods text-cyan", slotName: "test3" }],
         };
     },
     tabSelect(e) {
