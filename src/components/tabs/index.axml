@@ -1,14 +1,14 @@
-<scroll-view scroll-x class="bg-white nav text-center fixed" style="top:{{top||0}}">
+<scroll-view scroll-x class="bg-white nav text-center fixed" style="top:{{top}}">
     <view class="cu-item {{index==TabCur?'text-blue cur':''}}" a:for="{{tabNav}}" onTap='tabSelect' data-id="{{index}}">
             <text class="{{tabNav[index].icon||''}}"></text> {{tabNav[index].title}}
     </view>
 </scroll-view>
 
-<view style="height:  90rpx"></view>
+<!-- <view style="height:calc( 90rpx + {{top}})"></view> -->
 
 
 <scroll-view a:for="{{tabNav.length}}" scroll-y
-    style="height: calc( 100vh - 90rpx - top||0 - bottom||0);{{TabCur==index?'':'display:none;'}}" a:key="{{index}}">
+    style="height: calc( 100vh - 90rpx - {{top}} - {{bottom}});{{TabCur==index?'':'display:none;'}};position: fixed;top:calc( 90rpx + {{top}});width:100%" a:key="{{index}}">
     <slot name="{{tabNav[item-1].slotName}}">
         {{tabNav[item-1].title}}
     </slot>
