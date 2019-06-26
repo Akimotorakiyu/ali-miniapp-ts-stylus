@@ -1,13 +1,4 @@
 <view a:if="{{items.length>0}}">
-  <view class="cu-bar bg-white solid-bottom" a:if="{{title.length>0 }}">
-    <view class="action" style="color:#000">
-      {{title}}
-    </view>
-  </view>
-
-
-
-
   <view class="cu-list menu" a:if="{{type=='list'}}">
     <!-- info -->
     <block a:for="{{items}}">

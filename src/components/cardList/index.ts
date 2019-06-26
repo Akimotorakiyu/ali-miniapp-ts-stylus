@@ -11,7 +11,6 @@ Component({
         onMulitSelect:undefined,
         accessControl: false,
         access: {},
-        title: "",
         name:""
     },
     didMount() {

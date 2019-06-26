@@ -1,9 +1,4 @@
 <view a:if="{{show && items.length>0}}">
-  <view class="cu-bar bg-white solid-bottom" a:if="{{title.length>0 }}">
-    <view class="action" style="color:#000">
-      {{title}}
-    </view>
-  </view>
   <view class="cu-list menu sm-border {{menuCard?'card-menu':''}}">
     <!-- info -->
     <block a:for="{{items}}">
