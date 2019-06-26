@@ -7,7 +7,7 @@
     <view class="cu-item cu-card case bg-gray" style="padding: 0">
       <view class="cu-item shadow bg-white" onTap="onItemClick" data-index="{{index}}" data-data="{{item}}"
         style="margin: 0.2rem ;margin-bottom: 0">
-        <view class="image">
+        <view class="image" style="border-bottom-left-radius: 0;border-bottom-right-radius: 0;">
           <image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"
             style="height: 220rpx;"></image>
           <label class="{{item.selected?'bg-green':'bg-white'}} mulitSelect " a:if="{{selectionControl}}" catchTap=""
@@ -18,22 +18,21 @@
               style="margin: 0;padding:0;color: ivory;font-size: 36rpx;display:inline"></text>
           </label>
         </view>
-      </view>
-      <view class="content text-left bg-white" style="line-height: 1.4;margin: 0.2rem;margin-top: 0;padding: 0.1rem;padding-top: 0;border-radius: 0.1rem;border-top-left-radius: 0;border-top-right-radius: 0;">
-        <view class="title" style="margin-bottom: 0rpx;overflow: hidden;height: 2.8em">{{item.title}}
-        </view>
-        <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}">
-          <view class="desc text-grey text-sm">
-            <view>问题编号：A</view>
-            <view>问题登记：A</view>
-            <view>开始日期：2019-08-12</view>
-            <view>结束日期：2018-12-30</view>
+
+        <view class="content text-left bg-white" style="line-height: 1.4;margin: 0.2rem;margin-top: 0;margin-bottom: 0.1rem;">
+            <view class="title" style="margin-bottom: 0rpx;overflow: hidden;height: 2.8em">{{item.title}}
+            </view>
+            <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}">
+              <view class="desc text-grey text-sm">
+                <view>问题编号：A</view>
+                <view>问题登记：A</view>
+                <view>开始日期：2019-08-12</view>
+                <view>结束日期：2018-12-30</view>
+              </view>
+            </slot>
           </view>
-        </slot>
       </view>
     </view>
-
-
 
   </block>
 </view>
