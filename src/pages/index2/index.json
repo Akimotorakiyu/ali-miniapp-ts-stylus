@@ -1,6 +1,7 @@
 {
   "usingComponents":{
     "common-button":"../../components/button/index",
+    "common-bar":"../../components/bar/index",
     "common-miniphotolist":"../../components/miniPhotoList/index"
   }
 }

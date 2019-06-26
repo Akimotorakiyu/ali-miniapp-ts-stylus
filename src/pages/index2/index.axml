@@ -4,6 +4,9 @@
 <common-button></common-button>
 <common-button confirm="{{true}}" onTap="onItemClick"></common-button>
 
+
+<common-bar>你好世界</common-bar>
+
 <common-miniphotolist items="{{items}}" type="list">
         <view slot="extra" slot-scope="props" class="text-grey text-xs">插槽</view>
         <view slot="extra" slot-scope="props" class="cu-tag round bg-grey sm">插槽插槽</view>

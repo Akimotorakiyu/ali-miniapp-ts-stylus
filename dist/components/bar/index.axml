@@ -1,0 +1,17 @@
+<view class="cu-bar solid-bottom {{class||'bg-white'}}">
+    <view class="action">
+        <slot>
+            {{item.title}}
+        </slot>
+    </view>
+    <view class="content text-bold">
+        <slot data="{{item}}" index="{{index}}" name="content">
+            {{item.content}}
+        </slot>
+    </view>
+    <view class="action">
+        <slot data="{{item}}" index="{{index}}" name="action">
+            {{item.action}}
+        </slot>
+    </view>
+</view>
