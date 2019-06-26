@@ -1,12 +1,18 @@
-消息
+<common-tabs tabNav="{{tabNav}}">
+    <view slot="test1">
 
-<view class="class">此页面允许下拉</view>
-
-<view class="cu-bar bg-white ">
-  <view class="action">
-  <text class="cuIcon-title text-green"></text>
-    <text>表单组件</text>
-  </view>
-</view>
-
-<common-form form="{{form}}" onChange="change" data="{{data}}" selection="{{selection}}"></common-form>
+        <common-bar>表单组件</common-bar>
+        1
+        <common-form form="{{form}}" onChange="change" data="{{data}}" selection="{{selection}}"></common-form>
+    </view>
+    <view slot="test2">
+        <common-bar>表单组件</common-bar>
+        2
+        <common-form form="{{form}}" onChange="change" data="{{data}}" selection="{{selection}}"></common-form>
+    </view>
+    <view slot="test3">
+        <common-bar>表单组件</common-bar>
+        3
+        <common-form form="{{form}}" onChange="change" data="{{data}}" selection="{{selection}}"></common-form>
+    </view>
+</common-tabs>

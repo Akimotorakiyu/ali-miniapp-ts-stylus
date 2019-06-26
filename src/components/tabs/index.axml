@@ -1,1 +1,15 @@
-我是tabs
+<scroll-view scroll-x class="bg-white nav text-center fixed">
+    <view class="cu-item {{index==TabCur?'text-blue cur':''}}" a:for="{{tabNav}}" onTap='tabSelect' data-id="{{index}}">
+        {{tabNav[index]}}
+    </view>
+</scroll-view>
+
+<view style="height:  90rpx"></view>
+
+
+<scroll-view a:for="{{tabNav.length}}" scroll-y style="height: calc( 100vh - 90rpx);{{TabCur==index?'':'display:none;'}}"
+    a:key="{{index}}">
+    <slot name="{{tabNav[item-1]}}">
+        {{tabNav[item-1]}}
+    </slot>
+</scroll-view>

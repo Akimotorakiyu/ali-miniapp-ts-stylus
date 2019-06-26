@@ -1,7 +1,7 @@
 {
-  "allowsBounceVertical": "YES",
   "usingComponents":{
     "common-form":"../../components/commonForm/index",
+    "common-tabs":"../../components/tabs/index",
     "common-button":"../../components/button/index",
     "common-bar":"../../components/bar/index",
     "common-miniphotolist":"../../components/miniPhotoList/index",

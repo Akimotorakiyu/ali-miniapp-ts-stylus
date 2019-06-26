@@ -87,8 +87,17 @@ Page({
             selection: {
                 picker: ["picker-1", "picker-2", "picker-3"],
                 picker2: [{ label: "picker-1" }, { label: "picker-2" }, { label: "picker-3" }],
-            }
+            },
+            TabCur: 0,
+            tabNav: ['test1', 'test2', 'test3'],
         };
+    },
+    tabSelect(e) {
+        console.log(e);
+        this.setData({
+            TabCur: e.currentTarget.dataset.id,
+            scrollLeft: (e.currentTarget.dataset.id - 1) * 60
+        });
     },
     change(data) {
         console.log(data);
