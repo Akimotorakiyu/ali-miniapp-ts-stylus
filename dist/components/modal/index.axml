@@ -1,4 +1,5 @@
-<view a:if="{{item.type=='bottomModal'}}" class="cu-modal bottom-modal {{ item.show?'show':''}}" onTap="onShowModal">
+<view a:if="{{item.type=='bottomModal'}}" class="cu-modal bottom-modal {{ item.show?'show':''}}" onTap="onShowModal"
+    disable-scroll="{{true}}">
     <view class="cu-dialog" catchTap="catchTap">
         <slot>
             <view style="min-height: 200rpx">
@@ -9,7 +10,7 @@
 </view>
 
 <view a:if="{{item.type=='drawer-modal-left'}}" class="cu-modal drawer-modal justify-start {{item.show?'show':''}}"
-    onTap="onShowModal">
+    onTap="onShowModal" disable-scroll="{{true}}">
     <view class="cu-dialog" catchTap="catchTap" style="height:100vh;flex-basis: 75%;">
         <slot>
             modal内容
@@ -18,7 +19,7 @@
 </view>
 
 <view a:if="{{item.type=='drawer-modal-right'}}" class="cu-modal drawer-modal justify-end {{item.show?'show':''}}"
-    onTap="onShowModal">
+    onTap="onShowModal" disable-scroll="{{false}}">
     <view class="cu-dialog" catchTap="catchTap" style="height:100vh;flex-basis: 75%;">
         <slot>
             modal内容
