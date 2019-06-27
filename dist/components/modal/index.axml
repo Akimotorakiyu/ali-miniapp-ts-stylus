@@ -10,7 +10,7 @@
 
 <view a:if="{{item.type=='drawer-modal-left'}}" class="cu-modal drawer-modal justify-start {{item.show?'show':''}}"
     onTap="onShowModal">
-    <view class="cu-dialog basis-lg" catchTap="catchTap" style="height:100vh">
+    <view class="cu-dialog" catchTap="catchTap" style="height:100vh;flex-basis: 75%;">
         <slot>
             modal内容
         </slot>
@@ -19,7 +19,7 @@
 
 <view a:if="{{item.type=='drawer-modal-right'}}" class="cu-modal drawer-modal justify-end {{item.show?'show':''}}"
     onTap="onShowModal">
-    <view class="cu-dialog basis-lg" catchTap="catchTap" style="height:100vh">
+    <view class="cu-dialog" catchTap="catchTap" style="height:100vh;flex-basis: 75%;">
         <slot>
             modal内容
         </slot>
