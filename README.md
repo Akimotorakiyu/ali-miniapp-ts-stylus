@@ -4,6 +4,15 @@
 
 集成请求库[`wefech`](https://github.com/jonnyshao/wefetch)，集成组件库[`mini-antui`](https://github.com/ant-mini-program/mini-antui)，集成样式库[`ColorUI`](https://github.com/weilanwl/ColorUI)，集成[`Font Awesome`](https://github.com/FortAwesome/Font-Awesome)
 
+## 截图
+
+![](./photos/1.png)
+![](./photos/2.png)
+![](./photos/3.png)
+![](./photos/4.png)
+![](./photos/5.png)
+
+
 ## 使用方法
 
 1. 开发前准备
