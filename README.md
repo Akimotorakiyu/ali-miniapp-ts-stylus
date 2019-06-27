@@ -30,6 +30,24 @@ yarn dev
   * VS code打开本项目。
   * 阿里小程序开发工具打开本项目`dist/`。
 
+3. `vscode`配置
+
+点击菜单，依次进入文件、首选项、设置，在编辑器中编辑
+![](./photos/set1.png)
+加入对小程序文件的格式化支持
+```json
+{
+    "files.associations": {
+        "*.acss":"css",
+        "*.wxss":"css",
+        "*.axml":"html"
+    },
+    //... ...
+}
+```
+![](./photos/set2.png)
+
+
 ## 注意事项
 
 ### 组件引用相关
