@@ -3,6 +3,10 @@
 Font Awesome支持
 <text class="fa fa-heart text-red"></text>
 
+
+<common-button  onTap="showModal" value="{{name:'modal3',show:true}}">顶部模态框</common-button>
+<common-modal item="{{modal3}}" onShowModal="showModal"></common-modal>
+
 <common-button  onTap="showModal" value="{{name:'modal',show:true}}">底部模态框</common-button>
 <common-modal item="{{modal}}" onShowModal="showModal"></common-modal>
 

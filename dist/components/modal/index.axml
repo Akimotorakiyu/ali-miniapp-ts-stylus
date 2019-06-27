@@ -1,3 +1,14 @@
+<view a:if="{{item.type=='topModal'}}" class="top-modal {{ item.show?'show':''}}" onTap="onShowModal"
+    disable-scroll="{{true}}">
+    <view class="top-dialog" catchTap="catchTap">
+        <slot>
+            <view style="min-height: 200rpx">
+                modal内容
+            </view>
+        </slot>
+    </view>
+</view>
+
 <view a:if="{{item.type=='bottomModal'}}" class="cu-modal bottom-modal {{ item.show?'show':''}}" onTap="onShowModal"
     disable-scroll="{{true}}">
     <view class="cu-dialog" catchTap="catchTap">

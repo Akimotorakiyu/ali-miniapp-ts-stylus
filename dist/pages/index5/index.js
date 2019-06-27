@@ -42,6 +42,11 @@ Page({
                 type: "drawer-modal-right",
                 name: "modal2"
             },
+            modal3: {
+                show: false,
+                type: "topModal",
+                name: "modal3"
+            }
         };
     },
     onItemClick(info) {

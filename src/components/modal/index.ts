@@ -26,6 +26,7 @@ Component({
     ,
     methods: {
         onShowModal() {
+           
             this.props.onShowModal({
                 name: this.props.item.name,
                 show: false

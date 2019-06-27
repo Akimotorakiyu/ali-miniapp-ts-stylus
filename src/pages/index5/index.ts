@@ -43,12 +43,18 @@ Page({
         type: "drawer-modal-right",
         name: "modal2"
       },
+      modal3:{
+        show: false,
+        type: "topModal",
+        name: "modal3"
+      }
     }
   },
   onItemClick(info: { index: number, data: any }) {
     console.log(info)
   },
   showModal(show: { name: string, show: boolean }) {
+
     this.setData({
       [`${show.name}.show`]: show.show
     })
