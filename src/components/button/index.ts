@@ -16,7 +16,8 @@ Component({
         },
         confirm: false,
         confirmContent: "是否确认",
-        btnClass:"cu-btn round bg-blue"
+        btnClass: "cu-btn round bg-blue",
+        value: undefined
     },
     didMount() {
 
@@ -38,7 +39,7 @@ Component({
                     loading: true,
                     disabled: true
                 })
-                await this.props.onTap()
+                await this.props.onTap(this.props.value ? JSON.parse(JSON.stringify(this.props.value)) : undefined)
             } catch (error) {
                 console.log(error)
             } finally {
@@ -52,8 +53,8 @@ Component({
             return new Promise((resolve, reject) => {
                 my.confirm({
                     title: "提示",
-                    confirmButtonText:"确认",
-                    cancelButtonText:"取消",
+                    confirmButtonText: "确认",
+                    cancelButtonText: "取消",
                     content: this.props.confirmContent,
                     success(res) {
                         if (res.confirm) {

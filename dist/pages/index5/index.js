@@ -26,10 +26,30 @@ Page({
                 accessId3: true,
                 accessId5: true,
                 accessId7: true,
-            }
+            },
+            modal: {
+                show: false,
+                type: "bottomModal",
+                name: "modal"
+            },
+            modal1: {
+                show: false,
+                type: "drawer-modal-left",
+                name: "modal1"
+            },
+            modal2: {
+                show: false,
+                type: "drawer-modal-right",
+                name: "modal2"
+            },
         };
     },
     onItemClick(info) {
         console.log(info);
+    },
+    showModal(show) {
+        this.setData({
+            [`${show.name}.show`]: show.show
+        });
     }
 });

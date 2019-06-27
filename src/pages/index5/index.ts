@@ -1,15 +1,15 @@
 let app = getApp()
 
 Page({
-  data(){
+  data() {
     return {
-      tabbar:[{
+      tabbar: [{
         type: "default",
-        title:"creative",
-        icon:"cuIcon-creative",
+        title: "creative",
+        icon: "cuIcon-creative",
         path: "./index",
         accessId: "accessId1"
-      },{
+      }, {
         type: "slot",
         title: "slot1",
         icon: "cuIcon-lightauto text-blue",
@@ -27,13 +27,32 @@ Page({
         accessId3: true,
         accessId5: true,
         accessId7: true,
-      }
+      },
+      modal: {
+        show: false,
+        type: "bottomModal",
+        name: "modal"
+      },
+      modal1: {
+        show: false,
+        type: "drawer-modal-left",
+        name: "modal1"
+      },
+      modal2: {
+        show: false,
+        type: "drawer-modal-right",
+        name: "modal2"
+      },
     }
   },
-  onItemClick(info:{index:number,data:any}){
+  onItemClick(info: { index: number, data: any }) {
     console.log(info)
+  },
+  showModal(show: { name: string, show: boolean }) {
+    this.setData({
+      [`${show.name}.show`]: show.show
+    })
   }
-
 });
 
 export { }

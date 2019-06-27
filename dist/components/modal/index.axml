@@ -1,0 +1,27 @@
+<view a:if="{{item.type=='bottomModal'}}" class="cu-modal bottom-modal {{ item.show?'show':''}}" onTap="onShowModal">
+    <view class="cu-dialog" catchTap="catchTap">
+        <slot>
+            <view style="min-height: 200rpx">
+                modal内容
+            </view>
+        </slot>
+    </view>
+</view>
+
+<view a:if="{{item.type=='drawer-modal-left'}}" class="cu-modal drawer-modal justify-start {{item.show?'show':''}}"
+    onTap="onShowModal">
+    <view class="cu-dialog basis-lg" catchTap="catchTap" style="height:100vh">
+        <slot>
+            modal内容
+        </slot>
+    </view>
+</view>
+
+<view a:if="{{item.type=='drawer-modal-right'}}" class="cu-modal drawer-modal justify-end {{item.show?'show':''}}"
+    onTap="onShowModal">
+    <view class="cu-dialog basis-lg" catchTap="catchTap" style="height:100vh">
+        <slot>
+            modal内容
+        </slot>
+    </view>
+</view>

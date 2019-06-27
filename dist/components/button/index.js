@@ -16,7 +16,8 @@ Component({
         },
         confirm: false,
         confirmContent: "是否确认",
-        btnClass: "cu-btn round bg-blue"
+        btnClass: "cu-btn round bg-blue",
+        value: undefined
     },
     didMount() {
     },
@@ -34,7 +35,7 @@ Component({
                     loading: true,
                     disabled: true
                 });
-                await this.props.onTap();
+                await this.props.onTap(this.props.value ? JSON.parse(JSON.stringify(this.props.value)) : undefined);
             }
             catch (error) {
                 console.log(error);

@@ -1,13 +1,15 @@
 {
-  "usingComponents":{
-    "common-form":"../../components/commonForm/index",
-    "common-tabs":"../../components/tabs/index",
-    "common-button":"../../components/button/index",
-    "common-bar":"../../components/bar/index",
-    "common-miniphotolist":"../../components/miniPhotoList/index",
-    "common-grid":"../../components/grid/index",
-    "common-card":"../../components/cardList/index",
-    "common-list":"../../components/list/index",
-    "common-tabbar":"../../components/tabbar/index"
+  "allowsBounceVertical": "YES",
+  "usingComponents": {
+    "common-form": "../../components/commonForm/index",
+    "common-tabs": "../../components/tabs/index",
+    "common-button": "../../components/button/index",
+    "common-bar": "../../components/bar/index",
+    "common-miniphotolist": "../../components/miniPhotoList/index",
+    "common-grid": "../../components/grid/index",
+    "common-card": "../../components/cardList/index",
+    "common-list": "../../components/list/index",
+    "common-modal": "../../components/modal/index",
+    "common-tabbar": "../../components/tabbar/index"
   }
 }

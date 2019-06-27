@@ -3,6 +3,16 @@
 Font Awesome支持
 <text class="fa fa-heart text-red"></text>
 
+<common-button  onTap="showModal" value="{{name:'modal',show:true}}">底部模态框</common-button>
+<common-modal item="{{modal}}" onShowModal="showModal"></common-modal>
+
+<common-button  onTap="showModal" value="{{name:'modal1',show:true}}">左侧抽屉</common-button>
+<common-modal item="{{modal1}}" onShowModal="showModal"></common-modal>
+
+<common-button  onTap="showModal" value="{{name:'modal2',show:true}}">右侧抽屉</common-button>
+<common-modal item="{{modal2}}" onShowModal="showModal"></common-modal>
+
+
 <common-tabbar items="{{tabbar}}" access="{{access}}" accessControl="{{true}}" onItemClick="onItemClick">
     <common-button slot="slot2" slot-scope="props" confirm="{{true}}" >slot2-{{props.data.title}}</common-button>
 </common-tabbar>
