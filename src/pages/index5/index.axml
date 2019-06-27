@@ -4,7 +4,5 @@ Font Awesome支持
 <text class="fa fa-heart text-red"></text>
 
 <common-tabbar items="{{tabbar}}" access="{{access}}" accessControl="{{true}}" onItemClick="onItemClick">
-
-    <view slot="slot2" slot-scope="props" class="bg-red submit" >slot2-{{props.data.title}}</view>
-
+    <common-button slot="slot2" slot-scope="props" confirm="{{true}}" >slot2-{{props.data.title}}</common-button>
 </common-tabbar>
