@@ -3,15 +3,22 @@
   top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
   display: none;
   background-color: rgba(0,0,0,0.6);
   z-index: 1000;
 }
 .top-modal.show {
   display: block;
-  bottom: 0;
 }
-.top-modal.show >.top-dialog {
+.top-modal >.top-dialog {
   width: 100%;
   background-color: #fff;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+}
+.top-modal.show >.top-dialog {
+  min-height: 200rpx;
 }
