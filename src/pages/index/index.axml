@@ -1,3 +1,9 @@
+
+<common-searchbar>
+        <text slot="extra">筛选<text slot="extra" class="cuIcon-filter"></text></text>
+</common-searchbar>
+
+
 <common-tabs tabNav="{{tabNav}}" top="100px" bottom="100px">
     <view slot="test1">
 

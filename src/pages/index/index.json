@@ -1,5 +1,6 @@
 {
   "usingComponents":{
+    "common-searchbar":"../../components/searchbar/index",
     "common-form":"../../components/commonForm/index",
     "common-tabs":"../../components/tabs/index",
     "common-button":"../../components/button/index",
