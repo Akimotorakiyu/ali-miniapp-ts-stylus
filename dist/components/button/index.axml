@@ -1,1 +1,4 @@
-<button class="{{btnClass}}" onTap="taptap" disabled="{{disabled}}"><text a:if="{{loading}}"  class="cuIcon-loading2 iconfont-spin"></text><slot>按钮</slot></button>
+<button a:if="{{accessControl?access[accessId]:true}}" class="{{btnClass}}" onTap="taptap" disabled="{{disabled}}"><text
+        a:if="{{loading}}" class="cuIcon-loading2 iconfont-spin"></text>
+    <slot>按钮</slot>
+</button>

@@ -3,6 +3,10 @@
 
 <common-button></common-button>
 <common-button confirm="{{true}}" onTap="onItemClick"></common-button>
+<common-button confirm="{{true}}" accessControl="{{true}}" accessId="accessId1" access="{{ {accessId1:true} }}" onTap="onItemClick">权限控制1</common-button>
+<common-button confirm="{{true}}" accessControl="{{true}}" accessId="accessId1"  onTap="onItemClick">权限控制2</common-button>
+
+
 
 
 <common-bar>你好世界</common-bar>

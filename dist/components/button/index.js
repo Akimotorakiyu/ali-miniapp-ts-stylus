@@ -17,7 +17,10 @@ Component({
         confirm: false,
         confirmContent: "是否确认",
         btnClass: "cu-btn round bg-blue",
-        value: undefined
+        value: undefined,
+        accessId: "",
+        accessControl: false,
+        access: {}
     },
     didMount() {
     },
