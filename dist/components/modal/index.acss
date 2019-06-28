@@ -7,6 +7,10 @@
   display: none;
   background-color: rgba(0,0,0,0.6);
   z-index: 1000;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
 }
 .top-modal.show {
   display: block;

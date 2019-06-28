@@ -1,4 +1,4 @@
-<view a:if="{{item.type=='topModal'}}" class="top-modal {{ item.show?'show':''}}" onTap="onShowModal"
+<view a:if="{{item.type=='topModal'}}" class="top-modal animation-fade {{ item.show?'show':''}}" onTap="onShowModal"
     disable-scroll="{{true}}">
     <view class="top-dialog animation-slide-top" catchTap="catchTap">
         <slot>
