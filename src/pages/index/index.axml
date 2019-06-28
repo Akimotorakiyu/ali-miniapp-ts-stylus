@@ -1,5 +1,5 @@
 
-<common-searchbar>
+<common-searchbar selection="{{selection}}" onChange="change" data="{{data}}">
         <text slot="extra">筛选<text slot="extra" class="cuIcon-filter"></text></text>
 </common-searchbar>
 

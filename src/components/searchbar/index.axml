@@ -13,3 +13,28 @@
         </slot>
     </view>
 </view>
+
+<view class="cu-bar tabbar bg-white" a:if="{{items.length>0}}">
+    <block a:for="{{items}}">
+        <block>
+            <!-- 基础样式 -->
+            <view class="action" a:if="{{item.type=='default'}}" onTap="select" data-name="{{item.name}}"
+                data-label="{{item.label}}" data-index="{{index}}" data-data="{{item}}">
+                <view class="">{{item.title}}</view>
+                <view >{{data[item.name]?item.label?data[item.name][item.label]:data[item.name]:""}}
+                </view>
+            </view>
+
+            <!-- solt -->
+            <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}" a:if="{{item.type=='slot'}}">
+                <view class="action" name="{{item.slotName}}" onTap="select" data-name="{{item.name}}"
+                    data-label="{{item.label}}" data-index="{{index}}" data-data="{{item}}">
+                    <view class="">{{item.title}}</view>
+                    <view class="content">
+                        {{data[item.name]?item.label?data[item.name][item.label]:data[item.name]:"请选择"}}</view>
+                </view>
+            </slot>
+        </block>
+
+    </block>
+</view>
