@@ -1,6 +1,8 @@
-
 <common-searchbar selection="{{selection}}" onChange="change" data="{{data}}">
-        <text slot="extra">筛选<text slot="extra" class="cuIcon-filter"></text></text>
+
+    <common-button btnClass="cu-btn round" slot="extra" onTap="showModal" value="{{name:'modal',show:true}}"><text>筛选<text
+                class="cuIcon-filter"></text></text>
+    </common-button>
 </common-searchbar>
 
 
@@ -22,3 +24,8 @@
         <common-form form="{{form}}" onChange="change" data="{{data}}" selection="{{selection}}"></common-form>
     </view>
 </common-tabs>
+
+<common-button onTap="showModal" value="{{name:'modal',show:true}}">右侧模态框</common-button>
+<common-modal item="{{modal}}" onShowModal="showModal">
+    假装这里面有大量的筛选功能
+</common-modal>

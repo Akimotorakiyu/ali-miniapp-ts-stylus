@@ -3,6 +3,11 @@ let app = getApp()
 Page({
   data() {
     return {
+      modal: {
+        show: false,
+        type: "drawer-modal-right",
+        name: "modal"
+      },
       data: {
         input: "我是厨师值哦",
         textarea: "我是谁？",
@@ -96,6 +101,12 @@ Page({
       { title: "测试2", icon: "cuIcon-record text-olive", slotName: "test2" },
       { title: "测试3", icon: "cuIcon-goods text-cyan", slotName: "test3" }],
     }
+  },
+  showModal(show: { name: string, show: boolean }) {
+
+    this.setData({
+      [`${show.name}.show`]: show.show
+    })
   },
   tabSelect(e) {
     console.log(e);
