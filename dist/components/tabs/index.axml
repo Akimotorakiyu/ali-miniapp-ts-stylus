@@ -1,14 +1,28 @@
 <scroll-view scroll-x class="bg-white nav text-center fixed" style="top:{{top}}">
-    <view class="cu-item {{index==TabCur?'text-blue cur':''}}" a:for="{{tabNav}}" onTap='tabSelect' data-id="{{index}}">
+    <block a:for="{{tabNav}}">
+        <slot a:if="{{index+1==1}}" name="first">
+            <view class="cu-item extra text-center" style="background-color: white"><text class="cuIcon-roundright"></text></view>
+        </slot>
+        <view class="cu-item {{index==TabCur?'text-blue cur aotu':''}}" onTap='tabSelect' data-id="{{index}}">
             <text class="{{tabNav[index].icon||''}}"></text> {{tabNav[index].title}}
-    </view>
+        </view>
+        <slot a:if="{{index+1!=tabNav.length}}" name="middle">
+            <view class="cu-item extra text-center" style="background-color: white"><text class="cuIcon-right"></text></view>
+        </slot>
+        <slot a:if="{{index+1==tabNav.length}} " name="last">
+            <view class="cu-item extra text-center" style="background-color: white"><text class="cuIcon-roundclose"></text></view>
+        </slot>
+
+    </block>
+
 </scroll-view>
 
 <!-- <view style="height:calc( 90rpx + {{top}})"></view> -->
 
 
 <scroll-view a:for="{{tabNav.length}}" scroll-y
-    style="height: calc( 100vh - 90rpx - {{top}} - {{bottom}});{{TabCur==index?'':'display:none;'}};position: fixed;top:calc( 90rpx + {{top}});width:100%" a:key="{{index}}">
+    style="height: calc( 100vh - 90rpx - {{top}} - {{bottom}});{{TabCur==index?'':'display:none;'}};position: fixed;top:calc( 90rpx + {{top}});width:100%"
+    a:key="{{index}}">
     <slot name="{{tabNav[item-1].slotName}}">
         {{tabNav[item-1].title}}
     </slot>
