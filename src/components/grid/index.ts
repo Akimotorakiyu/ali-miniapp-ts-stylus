@@ -10,6 +10,7 @@ Component({
         items: [],
         accessControl: false,
         access: {},
+        title:""
     },
     didMount() {
         this.checkAccessShow()
