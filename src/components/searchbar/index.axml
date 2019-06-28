@@ -20,7 +20,7 @@
             <!-- 基础样式 -->
             <view class="action" a:if="{{item.type=='default'}}" onTap="select" data-name="{{item.name}}"
                 data-label="{{item.label}}" data-index="{{index}}" data-data="{{item}}">
-                <view class="">{{item.title}}</view>
+                <view class=""><text>{{item.title}}</text><text class="cuIcon-triangledownfill"  style="display: inline"></text></view>
                 <view >{{data[item.name]?item.label?data[item.name][item.label]:data[item.name]:""}}
                 </view>
             </view>
@@ -29,7 +29,7 @@
             <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}" a:if="{{item.type=='slot'}}">
                 <view class="action" name="{{item.slotName}}" onTap="select" data-name="{{item.name}}"
                     data-label="{{item.label}}" data-index="{{index}}" data-data="{{item}}">
-                    <view class="">{{item.title}}</view>
+                    <view class="">{{item.title}}<text class="cuIcon-triangledownfill" style="display: inline"></text></view>
                     <view class="content">
                         {{data[item.name]?item.label?data[item.name][item.label]:data[item.name]:"请选择"}}</view>
                 </view>

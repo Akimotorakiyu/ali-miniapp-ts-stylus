@@ -14,20 +14,20 @@ Component({
         },
         data: {},
         items: [{
-                title: "items1",
+                title: "条件1",
                 type: "default",
                 name: "picker"
             }, {
-                title: "items2",
+                title: "条件2",
                 type: "default",
                 name: "picker2",
                 label: "label",
             }, {
-                title: "items3",
+                title: "条件3",
                 type: "default",
                 name: "picker"
             }, {
-                title: "items4",
+                title: "条件4",
                 type: "default",
                 name: "picker2",
                 label: "label",
