@@ -25,6 +25,8 @@
     </view>
 </common-tabs>
 
+测试站位
+
 <common-button onTap="showModal" value="{{name:'modal',show:true}}">右侧模态框</common-button>
 <common-modal item="{{modal}}" onShowModal="showModal">
     假装这里面有大量的筛选功能

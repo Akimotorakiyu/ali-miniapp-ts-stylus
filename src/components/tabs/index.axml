@@ -1,16 +1,19 @@
 <scroll-view scroll-x class="bg-white nav text-center fixed" style="top:{{top}};z-index:900">
     <block a:for="{{tabNav}}">
         <slot a:if="{{index+1==1}}" name="first">
-            <view class="cu-item extra text-center" style="background-color: white"><text class="cuIcon-roundright"></text></view>
+            <view class="cu-item extra text-center" style="background-color: white"><text
+                    class="cuIcon-roundright"></text></view>
         </slot>
         <view class="cu-item {{index==TabCur?'text-blue cur aotu':''}}" onTap='tabSelect' data-id="{{index}}">
             <text class="{{tabNav[index].icon||''}}"></text> {{tabNav[index].title}}
         </view>
         <slot a:if="{{index+1!=tabNav.length}}" name="middle">
-            <view class="cu-item extra text-center" style="background-color: white"><text class="cuIcon-right"></text></view>
+            <view class="cu-item extra text-center" style="background-color: white"><text class="cuIcon-right"></text>
+            </view>
         </slot>
         <slot a:if="{{index+1==tabNav.length}} " name="last">
-            <view class="cu-item extra text-center" style="background-color: white"><text class="cuIcon-roundclose"></text></view>
+            <view class="cu-item extra text-center" style="background-color: white"><text
+                    class="cuIcon-roundclose"></text></view>
         </slot>
 
     </block>
@@ -27,3 +30,19 @@
         {{tabNav[item-1].title}}
     </slot>
 </scroll-view>
+
+
+<!-- 占位元素 -->
+
+<view style="visibility: hidden">
+    <view class="bg-white nav text-center">
+        <view class="cu-item">
+            ewwwwww
+        </view>
+
+    </view>
+
+    <view a:if="{{tabNav.length>0}}" style="height: calc( 100vh - 90rpx - {{top}} - {{bottom}});width:100%" a:key="{{index}}">
+        11111111
+    </view>
+</view>

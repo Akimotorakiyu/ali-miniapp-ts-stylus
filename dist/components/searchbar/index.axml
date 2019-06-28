@@ -1,40 +1,68 @@
-<view class="cu-bar solid-bottom {{class||'bg-white'}}">
-    <view class="search-form round">
-        <text data-name="{{name}}" class="cuIcon-roundclose text-red" style="margin-right:0" onTap="onblur"></text>
-        <input data-name="{{name}}" onBlur="onblur" placeholder="请输入" value="{{value}}" type="text"
-            style="margin-left:0.3em;margin-right:0.3em;padding:0"></input>
-        <button class="cu-btn bg-gray  text-green cuIcon-search round icon" style="margin:0px 0em 0px 0em"
-            onTap="onSearch"></button>
+<view class="" style="position: fixed;top: 0;left: 0;right: 0">
+    <view class="cu-bar solid-bottom {{class||'bg-white'}}">
+        <view class="search-form round">
+            <text data-name="{{name}}" class="cuIcon-roundclose text-red" style="margin-right:0" onTap="onblur"></text>
+            <input data-name="{{name}}" onBlur="onblur" placeholder="请输入" value="{{value}}" type="text"
+                style="margin-left:0.3em;margin-right:0.3em;padding:0"></input>
+            <button class="cu-btn bg-gray  text-green cuIcon-search round icon" style="margin:0px 0em 0px 0em"
+                onTap="onSearch"></button>
+        </view>
+
+        <view class="action">
+            <slot name="extra">
+
+            </slot>
+        </view>
     </view>
 
-    <view class="action">
-        <slot name="extra">
+    <view class="cu-bar tabbar bg-white" a:if="{{items.length>0}}">
+        <block a:for="{{items}}">
+            <block>
+                <!-- 基础样式 -->
+                <view class="action" a:if="{{item.type=='default'}}" onTap="select" data-name="{{item.name}}"
+                    data-label="{{item.label}}" data-index="{{index}}" data-data="{{item}}">
+                    <view class=""><text>{{item.title}}</text><text class="cuIcon-triangledownfill"
+                            style="display: inline"></text></view>
+                    <view>{{data[item.name]?item.label?data[item.name][item.label]:data[item.name]:""}}
+                    </view>
+                </view>
 
-        </slot>
+                <!-- solt -->
+                <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}" a:if="{{item.type=='slot'}}">
+                    <view class="action" name="{{item.slotName}}" onTap="select" data-name="{{item.name}}"
+                        data-label="{{item.label}}" data-index="{{index}}" data-data="{{item}}">
+                        <view class="">{{item.title}}<text class="cuIcon-triangledownfill"
+                                style="display: inline"></text></view>
+                        <view class="content">
+                            {{data[item.name]?item.label?data[item.name][item.label]:data[item.name]:"请选择"}}</view>
+                    </view>
+                </slot>
+            </block>
+        </block>
     </view>
 </view>
 
-<view class="cu-bar tabbar bg-white" a:if="{{items.length>0}}">
-    <block a:for="{{items}}">
-        <block>
-            <!-- 基础样式 -->
-            <view class="action" a:if="{{item.type=='default'}}" onTap="select" data-name="{{item.name}}"
-                data-label="{{item.label}}" data-index="{{index}}" data-data="{{item}}">
-                <view class=""><text>{{item.title}}</text><text class="cuIcon-triangledownfill"  style="display: inline"></text></view>
-                <view >{{data[item.name]?item.label?data[item.name][item.label]:data[item.name]:""}}
-                </view>
-            </view>
+<!-- 占位元素 -->
+<view style="visibility: hidden">
+    <view class="cu-bar ">
+        <view class="search-form round">
+            <button class="cu-btn bg-gray  text-green cuIcon-search round icon" style="margin:0px 0em 0px 0em"
+                onTap="onSearch"></button>
+        </view>
 
-            <!-- solt -->
-            <slot data="{{item}}" index="{{index}}" name="{{item.slotName}}" a:if="{{item.type=='slot'}}">
-                <view class="action" name="{{item.slotName}}" onTap="select" data-name="{{item.name}}"
-                    data-label="{{item.label}}" data-index="{{index}}" data-data="{{item}}">
-                    <view class="">{{item.title}}<text class="cuIcon-triangledownfill" style="display: inline"></text></view>
-                    <view class="content">
-                        {{data[item.name]?item.label?data[item.name][item.label]:data[item.name]:"请选择"}}</view>
-                </view>
+        <view class="action">
+            <slot name="extra">
+
             </slot>
-        </block>
+        </view>
+    </view>
 
-    </block>
+    <view class="cu-bar tabbar bg-white" a:if="{{items.length>0}}">
+        <view class="action">
+            <view class=""><text>11111</text><text class="cuIcon-triangledownfill" style="display: inline"></text>
+            </view>
+            <view>123
+            </view>
+        </view>
+    </view>
 </view>
