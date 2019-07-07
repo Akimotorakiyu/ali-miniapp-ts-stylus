@@ -13,9 +13,14 @@ Component({
         value: "",
         name: "",
         onSearch(data) {
-            console.log("search",data)
+            console.log("search", data)
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve('foo');
+                }, 3000);
+            })
         },
-        data:{
+        data: {
 
         },
         items: [{
@@ -51,15 +56,15 @@ Component({
     }
     ,
     methods: {
-        async onSearch(){
+        async onSearch() {
 
             try {
-               
+
                 this.setData({
                     loading: true,
                     disabled: true
                 })
-                await this.props.onSearch(this.props.data&&this.props.data[this.props.name] ? JSON.parse(JSON.stringify(this.props.data[this.props.name])) : undefined)
+                await this.props.onSearch(this.props.data && this.props.data[this.props.name] ? JSON.parse(JSON.stringify(this.props.data[this.props.name])) : undefined)
             } catch (error) {
                 console.log(error)
             } finally {

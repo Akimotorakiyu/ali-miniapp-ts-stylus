@@ -4,8 +4,8 @@
             <text data-name="{{name}}" class="cuIcon-roundclose text-red" style="margin-right:0" onTap="onblur"></text>
             <input data-name="{{name}}" onBlur="onblur" placeholder="请输入" value="{{data[name]}}" type="text"
                 style="margin-left:0.3em;margin-right:0.3em;padding:0"></input>
-            <button class="cu-btn bg-gray  text-green cuIcon-search round icon" style="margin:0px 0em 0px 0em"
-                onTap="onSearch"></button>
+            <button class="cu-btn bg-gray  text-green cuIcon-search  round icon" style="margin:0px 0em 0px 0em" disabled="{{disabled}}" a:if="{{!loading}}"
+                onTap="onSearch"></button><text a:if="{{loading}}" class="cuIcon-loading2 iconfont-spin"></text>
         </view>
 
         <view class="action">

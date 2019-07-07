@@ -14,6 +14,11 @@ Component({
         name: "",
         onSearch(data) {
             console.log("search", data);
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve('foo');
+                }, 3000);
+            });
         },
         data: {},
         items: [{
