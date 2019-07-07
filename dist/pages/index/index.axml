@@ -1,4 +1,4 @@
-<common-searchbar selection="{{selection}}" onChange="change" data="{{data}}">
+<common-searchbar selection="{{selection}}" onChange="change" data="{{data}}" name="searcher">
 
     <common-button btnClass="cu-btn round" slot="extra" onTap="showModal" value="{{name:'modal',show:true}}"><text>筛选<text
                 class="cuIcon-filter"></text></text>

@@ -1,7 +1,10 @@
 Component({
     mixins: [],
     data: function () {
-        return {};
+        return {
+            loading: false,
+            disabled: false
+        };
     },
     props: {
         onChange(info) {
@@ -9,8 +12,8 @@ Component({
         },
         value: "",
         name: "",
-        onSearch() {
-            console.log("search");
+        onSearch(data) {
+            console.log("search", data);
         },
         data: {},
         items: [{
@@ -41,6 +44,24 @@ Component({
     didUnmount() {
     },
     methods: {
+        async onSearch() {
+            try {
+                this.setData({
+                    loading: true,
+                    disabled: true
+                });
+                await this.props.onSearch(this.props.data && this.props.data[this.props.name] ? JSON.parse(JSON.stringify(this.props.data[this.props.name])) : undefined);
+            }
+            catch (error) {
+                console.log(error);
+            }
+            finally {
+                this.setData({
+                    loading: false,
+                    disabled: false
+                });
+            }
+        },
         onblur(event) {
             console.log(event);
             this.props.onChange({
