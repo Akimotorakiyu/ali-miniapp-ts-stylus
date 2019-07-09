@@ -1,4 +1,4 @@
-# ali-miniapp-ts-stylus-template
+# ali-miniapp-ts-stylus
 
 本模板采用`typescript`,`stylus`。
 
